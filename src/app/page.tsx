@@ -1,12 +1,7 @@
-import Sidebar from '@/components/General/Sidebar';
 import React from 'react';
 
 const HomePage = () => {
-	return (
-		<>
-			<Sidebar />
-		</>
-	);
+	return <></>;
 };
 
 export default HomePage;

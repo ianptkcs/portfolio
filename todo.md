@@ -1,0 +1,1 @@
+[] Padronizar tamanhos em sidebar

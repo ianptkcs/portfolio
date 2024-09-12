@@ -1,6 +1,11 @@
 const constants = {
+	global: {
+		background: 'rgb(15 23 42)',
+	},
 	sidebar: {
-		background: '#f5f5f5',
+		background: 'rgb(30 41 59)',
+		text: 'rgb(129 140 248)',
+		icon: 'rgb(129 140 248)',
 	},
 };
 

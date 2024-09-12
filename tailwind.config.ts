@@ -11,6 +11,9 @@ const config: Config = {
 		extend: {
 			colors: {
 				'sidebar-background': constants.sidebar.background,
+				'sidebar-text': constants.sidebar.text,
+				'sidebar-icon': constants.sidebar.icon,
+				'global-background': constants.global.background,
 			},
 			fontFamily: {
 				serif: ['var(--font-noto-serif)'],

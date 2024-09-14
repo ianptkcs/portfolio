@@ -3,20 +3,9 @@ import localFont from 'next/font/local';
 import './globals.css';
 import Sidebar from '@/components/General/Sidebar';
 
-const geistSans = localFont({
-	src: './fonts/GeistVF.woff',
-	variable: '--font-geist-sans',
-	weight: '100 900',
-});
-const geistMono = localFont({
-	src: './fonts/GeistMonoVF.woff',
-	variable: '--font-geist-mono',
-	weight: '100 900',
-});
-
-const notoSerif = localFont({
-	src: './fonts/NotoSerif-VariableFont_wdth,wght.ttf',
-	variable: '--font-noto-serif',
+export const sourceCodePro = localFont({
+	src: './fonts/SourceCodePro-VariableFont_wght.ttf',
+	variable: '--font-source-code-pro',
 	weight: '100 900',
 });
 
@@ -33,10 +22,14 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} antialiased bg-global-background`}
+				className={`${sourceCodePro.variable} bg-global-background font-mono flex`}
 			>
 				<Sidebar />
-				{children}
+				<div className='pl-32 grid grid-cols-10'>
+					<div className='col-start-2 col-end-9 mt-24'>
+						{children}
+					</div>
+				</div>
 			</body>
 		</html>
 	);

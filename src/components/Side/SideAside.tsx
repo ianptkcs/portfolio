@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useSidebar } from '@/context/Sidebar';
+import useNavigation from '@/hooks/useNavigation';
 
 interface SideAsideProps {
 	children: React.ReactNode;
@@ -21,6 +22,8 @@ const SideAside = ({ children }: SideAsideProps) => {
 		}
 	}, [isHovered]);
 
+	useNavigation();
+
 	const toggleSidebar = (hover: boolean) => {
 		const timeout: NodeJS.Timeout = setTimeout(() => {
 			setIsHovered(hover);
@@ -30,9 +33,9 @@ const SideAside = ({ children }: SideAsideProps) => {
 
 	return (
 		<aside
-			className={`fixed top-0 left-0 flex h-full flex-col gap-6 px-4 py-4 transition-all duration-300 ${
-				isOpen ? 'w-64' : 'w-16'
-			} bg-sidebar-background justify-center`}
+			className={`fixed top-0 left-0 flex h-full flex-col gap-6 py-4 transition-all duration-300 ${
+				isOpen ? 'w-48' : 'w-16 overflow-hidden'
+			} bg-sidebar-background justify-center shadow-md border-r-[1px] border-opacity-20 border-white`}
 			onMouseEnter={() => toggleSidebar(true)}
 			onMouseLeave={() => toggleSidebar(false)}
 		>

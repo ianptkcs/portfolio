@@ -24,7 +24,7 @@ const SideSpan = ({ children, className }: SideSpanProps) => {
 						: 'opacity-0 -translate-x-2'
 				} ${
 					!isRendered && 'w-0 overflow-hidden'
-				} transition-all duration-300 whitespace-nowrap`,
+				} transition-all duration-300 whitespace-nowrap text-sidebar-text`,
 				className
 			)}
 		>

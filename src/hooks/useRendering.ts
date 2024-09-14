@@ -9,7 +9,7 @@ const useRendering = () => {
 		if (!isVisible) {
 			timeout = setTimeout(() => {
 				setIsRendered(false);
-			}, 600);
+			}, 150);
 		} else if (isHovered) {
 			setIsRendered(true);
 		}

@@ -7,6 +7,8 @@ interface SidebarContextType {
 	setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
 	isRendered: boolean;
 	setIsRendered: React.Dispatch<React.SetStateAction<boolean>>;
+	route: string;
+	setRoute: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
@@ -29,6 +31,7 @@ export const SidebarProvider: React.FC<SidebarProviderProps> = ({
 	const [isHovered, setIsHovered] = useState(false);
 	const [isVisible, setIsVisible] = useState(false);
 	const [isRendered, setIsRendered] = useState(false);
+	const [route, setRoute] = useState('/');
 
 	return (
 		<SidebarContext.Provider
@@ -39,6 +42,8 @@ export const SidebarProvider: React.FC<SidebarProviderProps> = ({
 				setIsVisible,
 				isRendered,
 				setIsRendered,
+				route,
+				setRoute,
 			}}
 		>
 			{children}

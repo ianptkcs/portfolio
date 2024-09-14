@@ -1,11 +1,17 @@
 const constants = {
 	global: {
-		background: 'rgb(15 23 42)',
+		background: '#1b202c',
 	},
 	sidebar: {
-		background: 'rgb(30 41 59)',
-		text: 'rgb(129 140 248)',
-		icon: 'rgb(129 140 248)',
+		background: '#1b202c',
+		hoverItem: '#282A36',
+		text: '#d764b7',
+		icon: '#d764b7',
+	},
+	home: {
+		hello: '#d764b7',
+		normal: '#f8f8ef',
+		role: '#50fa7b',
 	},
 };
 

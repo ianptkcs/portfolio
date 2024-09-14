@@ -4,11 +4,19 @@
 		"href": "/"
 	},
 	{
-		"name": "About",
-		"href": "/about"
+		"name": "Timeline",
+		"href": "/timeline"
 	},
 	{
-		"name": "Contact",
-		"href": "/contact"
+		"name": "Skills",
+		"href": "/skills"
+	},
+	{
+		"name": "Education",
+		"href": "/education"
+	},
+	{
+		"name": "Projects",
+		"href": "/projects"
 	}
 ]

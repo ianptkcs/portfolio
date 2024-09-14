@@ -11,7 +11,7 @@ interface SideUlProps extends React.HTMLAttributes<HTMLUListElement> {
 const SideUl = ({ className }: SideUlProps) => {
 	const sidebarItems: SidebarItem[] = sidebarItemsJSON;
 	return (
-		<ul className={twMerge('flex flex-col gap-4', className)}>
+		<ul className={twMerge('flex flex-col gap-2', className)}>
 			{sidebarItems.map((item) => (
 				<SideLi
 					key={item.name}

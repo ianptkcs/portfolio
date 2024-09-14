@@ -10,7 +10,7 @@ const SideLogo = ({ className }: SideLogoProps) => {
 	return (
 		<div
 			className={twMerge(
-				'w-full h-fit absolute top-0 mt-6 flex items-baseline text-start font-serif text-sidebar-text',
+				'w-full h-fit absolute top-0 mt-6 flex items-baseline text-start font-serif px-4 text-sidebar-text',
 				className
 			)}
 		>

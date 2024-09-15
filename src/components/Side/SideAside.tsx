@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useEffect, useState } from 'react';
 import { useSidebar } from '@/context/Sidebar';
 import useNavigation from '@/hooks/useNavigation';
@@ -34,7 +32,9 @@ const SideAside = ({ children }: SideAsideProps) => {
 	return (
 		<aside
 			className={`fixed top-0 left-0 flex h-full flex-col gap-6 py-4 transition-all duration-300 ${
-				isOpen ? 'w-48' : 'w-16 overflow-hidden'
+				isOpen
+					? 'w-sidebar-hover'
+					: 'w-sidebar-no-hover overflow-hidden'
 			} bg-sidebar-background justify-center shadow-md border-r-[1px] border-opacity-20 border-white`}
 			onMouseEnter={() => toggleSidebar(true)}
 			onMouseLeave={() => toggleSidebar(false)}

@@ -7,6 +7,7 @@ const constants = {
 		hoverItem: '#282A36',
 		text: '#d764b7',
 		icon: '#d764b7',
+		width: 16,
 	},
 	home: {
 		hello: '#d764b7',

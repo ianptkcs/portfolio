@@ -25,7 +25,7 @@ const SideLi = ({ className, item }: SideLiProps) => {
 		<li
 			className={twMerge(
 				`flex flex-nowrap items-center w-full ${
-					(isHoveredLi || route === item.href) &&
+					(isHoveredLi || route === item.link) &&
 					'bg-sidebar-hover-item'
 				} transition-all duration-300 py-2`,
 				className

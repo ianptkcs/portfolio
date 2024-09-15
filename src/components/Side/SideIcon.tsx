@@ -1,21 +1,13 @@
 import constants from '@/styles/constants';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { LucideProps } from 'lucide-react';
 import { useSidebar } from '@/context/Sidebar';
 import { SidebarItem } from '@/interfaces/Sidebar';
+import { BaseIcon } from '@/interfaces/BaseIcon';
 
-interface IconMapProps {
-	icon: React.FC<LucideProps>;
-	className?: string;
-	item: SidebarItem;
-}
+interface SideIconProps extends BaseIcon<SidebarItem> {}
 
-const SideIcon = ({
-	icon,
-	className,
-	item,
-}: IconMapProps): JSX.Element | null => {
+const SideIcon = ({ icon, className, item }: SideIconProps): ReactElement => {
 	const IconComponent = icon;
 	const { route } = useSidebar();
 
@@ -23,12 +15,12 @@ const SideIcon = ({
 		<IconComponent
 			className={twMerge(
 				`text-sidebar-icon ${
-					route === item.href ? 'opacity-100' : 'opacity-50'
+					route === item.link ? 'opacity-100' : 'opacity-50'
 				} transition-all duration-300`,
 				className
 			)}
 			color={constants.sidebar.icon}
-			size={32}
+			size={(constants.sidebar.width * 4 * 3) / 8}
 		/>
 	);
 };

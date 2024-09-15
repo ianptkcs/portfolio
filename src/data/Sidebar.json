@@ -1,22 +1,26 @@
 [
 	{
 		"name": "Home",
-		"href": "/"
+		"link": "/"
 	},
 	{
 		"name": "Timeline",
-		"href": "/timeline"
+		"link": "/timeline"
 	},
 	{
 		"name": "Skills",
-		"href": "/skills"
+		"link": "/skills"
 	},
 	{
 		"name": "Education",
-		"href": "/education"
+		"link": "/education"
 	},
 	{
 		"name": "Projects",
-		"href": "/projects"
+		"link": "/projects"
+	},
+	{
+		"name": "Todo",
+		"link": "/todo"
 	}
 ]

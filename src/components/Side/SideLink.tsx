@@ -1,10 +1,11 @@
 import { SidebarItem } from '@/interfaces/Sidebar';
-import { getIcon } from '@/tools/Side/iconMap';
+import { getIcon } from '@/tools/iconMap';
 import Link from 'next/link';
 import React from 'react';
 import SideSpan from './SideSpan';
 import useRendering from '@/hooks/useRendering';
 import { useSidebar } from '@/context/Sidebar';
+import { sideIconMap } from '@/tools/sideIconMap';
 
 interface SideLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
 	className?: string;
@@ -17,11 +18,18 @@ const SideLink = ({ className, item }: SideLinkProps) => {
 
 	return (
 		<Link
-			href={item.href}
-			className={`flex items-center gap-2 px-4 ${isRendered && 'w-full'}`}
+			href={item.link}
+			className={`flex items-center h-fit justify-start px-sidebar ${
+				isRendered && 'w-full'
+			}`}
 		>
-			{getIcon({ item, className })}
-			<SideSpan>{item.name}</SideSpan>
+			{getIcon<SidebarItem>({
+				item,
+				iconMap: sideIconMap,
+				type: 'side',
+				className,
+			})}
+			<SideSpan item={item}>{item.name}</SideSpan>
 		</Link>
 	);
 };

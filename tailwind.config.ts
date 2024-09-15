@@ -19,6 +19,13 @@ const config: Config = {
 				'home-normal': constants.home.normal,
 				'home-role': constants.home.role,
 			},
+			width: {
+				'sidebar-no-hover': `${constants.sidebar.width / 4}rem`,
+				'sidebar-hover': `${(constants.sidebar.width * 3) / 4}rem`,
+			},
+			padding: {
+				sidebar: `${(constants.sidebar.width * 4 * 5) / 16}px`,
+			},
 		},
 	},
 	plugins: [],

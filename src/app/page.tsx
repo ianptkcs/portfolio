@@ -1,4 +1,12 @@
+'use client';
+
 import React from 'react';
+import contactsJSON from '@/data/Contacts.json';
+import { ContactItem } from '@/interfaces/Home';
+import { getIcon } from '@/tools/iconMap';
+import { contactIconMap } from '@/tools/contactIconMap';
+
+const contacts: ContactItem[] = contactsJSON;
 
 const HomePage = () => {
 	return (
@@ -16,8 +24,19 @@ const HomePage = () => {
 						</strong>
 					</span>
 				</span>
+				<ul className='flex gap-2'>
+					{contacts.map((item) => (
+						<li key={item.name}>
+							{getIcon<ContactItem>({
+								item,
+								iconMap: contactIconMap,
+								type: 'contact',
+							})}
+							{item.name}
+						</li>
+					))}
+				</ul>
 			</div>
-			<div></div>
 		</div>
 	);
 };

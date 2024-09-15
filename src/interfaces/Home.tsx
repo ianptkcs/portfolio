@@ -1,3 +1,3 @@
 import { BaseLink } from '@/interfaces/BaseLink';
 
-export interface SidebarItem extends BaseLink {}
+export interface ContactItem extends BaseLink {}

@@ -13,6 +13,10 @@ const constants = {
 		hello: '#d764b7',
 		normal: '#f8f8ef',
 		role: '#50fa7b',
+		button: '#535bd9',
+	},
+	rpgsheet: {
+		background: '#1b202c',
 	},
 };
 

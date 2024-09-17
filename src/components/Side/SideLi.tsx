@@ -27,13 +27,16 @@ const SideLi = ({ className, item }: SideLiProps) => {
 				`flex flex-nowrap items-center w-full ${
 					(isHoveredLi || route === item.link) &&
 					'bg-sidebar-hover-item'
-				} transition-all duration-300 py-2`,
+				} transition-all duration-300`,
 				className
 			)}
 			onMouseEnter={toggleLiHover}
 			onMouseLeave={toggleLiHover}
 		>
-			<SideLink item={item} />
+			<SideLink
+				item={item}
+				isHoveredLi={isHoveredLi}
+			/>
 		</li>
 	);
 };

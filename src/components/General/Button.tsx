@@ -1,0 +1,31 @@
+import { LucideProps } from 'lucide-react';
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+
+interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+	className?: string;
+	icon: React.ComponentType<LucideProps>;
+	children?: React.ReactNode;
+}
+
+const Button: React.FC<ButtonProps> = ({
+	className,
+	icon: Icon,
+	children,
+	...props
+}) => {
+	return (
+		<button
+			className={twMerge(
+				`flex gap-2 items-center py-2 px-8 bg-home-button rounded-md text-xl font-bold text-home-normal hover:scale-105 transition-all duration-300`,
+				className
+			)}
+			{...props}
+		>
+			{children}
+			<Icon className='inline ml-2 opacity-80' />
+		</button>
+	);
+};
+
+export default Button;

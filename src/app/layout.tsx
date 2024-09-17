@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import Sidebar from '@/components/General/Sidebar';
+import Header from '@/components/General/Header';
 
 export const sourceCodePro = localFont({
 	src: './fonts/SourceCodePro-VariableFont_wght.ttf',
@@ -24,9 +25,10 @@ export default function RootLayout({
 			<body
 				className={`${sourceCodePro.variable} bg-global-background font-mono flex`}
 			>
+				<Header />
 				<Sidebar />
 				<div className='pl-32 grid grid-cols-10'>
-					<div className='col-start-2 col-end-9 mt-24'>
+					<div className='col-start-2 col-end-10 mt-24'>
 						{children}
 					</div>
 				</div>

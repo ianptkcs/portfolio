@@ -18,6 +18,8 @@ const config: Config = {
 				'home-hello': constants.home.hello,
 				'home-normal': constants.home.normal,
 				'home-role': constants.home.role,
+				'home-button': constants.home.button,
+				'rpgsheet-background': constants.rpgsheet.background,
 			},
 			width: {
 				'sidebar-no-hover': `${constants.sidebar.width / 4}rem`,

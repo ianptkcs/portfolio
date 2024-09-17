@@ -10,18 +10,23 @@ import { sideIconMap } from '@/tools/sideIconMap';
 interface SideLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
 	className?: string;
 	item: SidebarItem;
+	isHoveredLi: boolean;
 }
 
-const SideLink = ({ className, item }: SideLinkProps) => {
-	const { isRendered } = useSidebar();
+const SideLink = ({ className, item, isHoveredLi }: SideLinkProps) => {
+	const { isRendered, route } = useSidebar();
 	useRendering();
 
 	return (
 		<Link
 			href={item.link}
-			className={`flex items-center h-fit justify-start px-sidebar ${
-				isRendered && 'w-full'
-			}`}
+			className={`flex items-center h-full justify-start px-sidebar py-2 ${
+				item && route === item.link
+					? 'opacity-100'
+					: isHoveredLi
+					? 'opacity-75'
+					: 'opacity-50'
+			} ${isRendered && 'w-full'}`}
 		>
 			{getIcon<SidebarItem>({
 				item,
@@ -29,7 +34,7 @@ const SideLink = ({ className, item }: SideLinkProps) => {
 				type: 'side',
 				className,
 			})}
-			<SideSpan item={item}>{item.name}</SideSpan>
+			<SideSpan>{item.name}</SideSpan>
 		</Link>
 	);
 };

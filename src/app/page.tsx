@@ -14,20 +14,25 @@ const contacts: ContactItem[] = contactsJSON;
 
 const HomePage = () => {
 	return (
-		<div className='grid grid-cols-5 mt-24 gap-10'>
-			<div className='flex flex-col col-span-2 gap-10 text-home-normal'>
-				<span className='text-6xl font-mono'>Hello!</span>
-				<span className='text-4xl text-home-normal font-mono'>
-					This is{' '}
-					<strong className='text-home-hello'>Ian Soares,</strong>
-					<br />
-					<span>
-						I am a{' '}
-						<strong className='text-home-role'>
-							Fullstack Development Student.
-						</strong>
+		<div className='grid grid-cols-5 gap-10'>
+			<div className='flex flex-col col-span-2 gap-10 text-normal'>
+				<div className='flex flex-col gap-4 mt-24'>
+					<span className='text-6xl text-keyword'>Hello!</span>
+					<span className='text-4xl'>
+						This is{' '}
+						<span className='text-string'>
+							&apos;Ian Soares&apos;
+						</span>
+						,
+						<br />
+						<span>
+							I am a{' '}
+							<span className='text-variables italic'>
+								Fullstack_ Development_Student.
+							</span>
+						</span>
 					</span>
-				</span>
+				</div>
 				<ul className='flex gap-10'>
 					{/* Mudar para between quando aumentar o numero de contatos */}
 					{contacts.map((item) => (

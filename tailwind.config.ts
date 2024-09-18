@@ -10,15 +10,20 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
+				normal: constants.global.normal,
+				string: constants.global.string,
+				keyword: constants.global.keyword,
+				number: constants.global.number,
+				function: constants.global.function,
+				variables: constants.global.variables,
+				operator: constants.global.operator,
+				button: constants.global.button,
+				'button-hover': constants.global.buttonHover,
 				'sidebar-background': constants.sidebar.background,
-				'sidebar-text': constants.sidebar.text,
-				'sidebar-icon': constants.sidebar.icon,
+				'sidebar-text': constants.global.keyword,
+				'sidebar-icon': constants.global.keyword,
 				'sidebar-hover-item': constants.sidebar.hoverItem,
 				'global-background': constants.global.background,
-				'home-hello': constants.home.hello,
-				'home-normal': constants.home.normal,
-				'home-role': constants.home.role,
-				'home-button': constants.home.button,
 				'rpgsheet-background': constants.rpgsheet.background,
 			},
 			width: {

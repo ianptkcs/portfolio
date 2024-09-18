@@ -1,3 +1,23 @@
 .custom-position {
 	object-position: 50% 15%;
+	object-fit: cover;
+}
+
+.background-gradient {
+	background: rgb(15, 11, 45);
+	background: linear-gradient(
+		45deg,
+		rgb(27, 11, 45) 0%,
+		rgba(20, 18, 60, 1) 51%,
+		rgba(15, 23, 42, 1) 100%
+	);
+}
+
+.background-gradient-sheet {
+	background: rgb(30, 27, 75);
+	background: linear-gradient(
+		135deg,
+		rgb(19, 17, 47) 20%,
+		rgba(35, 8, 79, 1) 100%
+	);
 }

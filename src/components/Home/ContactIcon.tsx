@@ -12,7 +12,7 @@ const ContactIcon = ({ icon, className }: ContactIconProps): ReactElement => {
 	return (
 		<IconComponent
 			className={twMerge(
-				`text-sidebar-icon transition-all duration-300`,
+				`text-sidebar-icon transition-all duration-300 hover:scale-110`,
 				className
 			)}
 			color={constants.sidebar.icon}

@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-border {
+	@apply border-[1px] border-opacity-40 border-normal rounded-xl;
+	box-shadow: 0 0 5px 0 rgb(146, 69, 255);
+}

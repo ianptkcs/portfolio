@@ -23,15 +23,11 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${sourceCodePro.variable} bg-global-background font-mono flex`}
+				className={`${sourceCodePro.variable} background-gradient font-mono flex`}
 			>
 				<Header />
 				<Sidebar />
-				<div className='pl-32 grid grid-cols-10'>
-					<div className='col-start-2 col-end-10 mt-24'>
-						{children}
-					</div>
-				</div>
+				<div className='ml-64 mt-24 mr-32'>{children}</div>
 			</body>
 		</html>
 	);

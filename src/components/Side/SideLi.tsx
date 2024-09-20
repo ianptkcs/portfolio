@@ -3,6 +3,7 @@ import { SidebarItem } from '@/interfaces/Sidebar';
 import { twMerge } from 'tailwind-merge';
 import SideLink from './SideLink';
 import { useSidebar } from '@/context/Sidebar';
+import { useGeneral } from '@/context/General';
 
 interface SideLiProps {
 	className?: string;
@@ -11,7 +12,8 @@ interface SideLiProps {
 
 const SideLi = ({ className, item }: SideLiProps) => {
 	const [isHoveredLi, setIsHoveredLi] = useState(false);
-	const { isHovered, route } = useSidebar();
+	const { route } = useGeneral();
+	const { isHovered } = useSidebar();
 
 	const toggleLiHover = () => {
 		setIsHoveredLi(!isHoveredLi);

@@ -1,9 +1,9 @@
-import { useSidebar } from '@/context/Sidebar';
+import { useGeneral } from '@/context/General';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
 const useNavigation = () => {
-	const { setRoute } = useSidebar();
+	const { setRoute } = useGeneral();
 	const pathname = usePathname(); // Hook correto para acessar a URL atual
 
 	useEffect(() => {

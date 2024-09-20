@@ -14,7 +14,10 @@ const InfoBox = ({ label, span, number = false }: InfoBoxProps) => {
 
 	return (
 		<div className='flex flex-col gap-1 w-full'>
-			<Label htmlFor='name'>{label}</Label>
+			<Label
+				htmlFor='name'
+				labelNode={label}
+			></Label>
 			<div className='p-2 custom-border max-w-[256px] custom-shadow'>
 				<span
 					className={`${number ? 'text-number' : 'text-string'}`}

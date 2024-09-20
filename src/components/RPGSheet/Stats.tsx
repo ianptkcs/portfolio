@@ -11,10 +11,9 @@ const Stats = ({ label, value }: StatsProps) => {
 		<div className='flex flex-col p-2 w-full text-center custom-border rounded-md'>
 			<Label
 				htmlFor='name'
-				className='not-italic text-wrap border-b-[1px] border-opacity-40 border-home-normal pb-1 px-2'
-			>
-				{label}
-			</Label>
+				labelNode={label}
+				className='not-italic text-wrap custom-border-bottom px-2'
+			></Label>
 			<div className='text-2xl py-2'>
 				<span
 					id='name'

@@ -12,15 +12,15 @@
 		"link": "/skills"
 	},
 	{
-		"name": "Education",
-		"link": "/education"
+		"name": "Study",
+		"link": "/study"
 	},
 	{
 		"name": "Projects",
 		"link": "/projects"
 	},
 	{
-		"name": "Todo",
+		"name": "ToDo",
 		"link": "/todo"
 	}
 ]

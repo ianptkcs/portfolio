@@ -10,6 +10,8 @@ const constants = {
 		keyword: '#ff79c6',
 		number: '#bd93f9',
 		operator: '#F8F8F2',
+		brackets: '#f1a028',
+		comment: '#6272A4',
 		border: 'border-[1px] border-opacity-40 border-home-normal rounded-xl',
 	},
 	sidebar: {

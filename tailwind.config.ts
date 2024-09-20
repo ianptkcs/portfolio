@@ -18,6 +18,8 @@ const config: Config = {
 				variables: constants.global.variables,
 				operator: constants.global.operator,
 				button: constants.global.button,
+				brackets: constants.global.brackets,
+				comment: constants.global.comment,
 				'button-hover': constants.global.buttonHover,
 				'sidebar-background': constants.sidebar.background,
 				'sidebar-text': constants.global.keyword,

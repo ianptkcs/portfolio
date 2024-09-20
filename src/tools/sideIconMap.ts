@@ -8,7 +8,7 @@ export const sideIconMap: {
 	Home: FaHome,
 	Timeline: FaTimeline,
 	Skills: FaDumbbell,
-	Education: FaGraduationCap,
+	Study: FaGraduationCap,
 	Projects: FaCode,
 	Todo: FaListCheck,
 };

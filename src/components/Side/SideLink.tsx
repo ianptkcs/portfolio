@@ -6,6 +6,7 @@ import SideSpan from './SideSpan';
 import useRendering from '@/hooks/useRendering';
 import { useSidebar } from '@/context/Sidebar';
 import { sideIconMap } from '@/tools/sideIconMap';
+import { useGeneral } from '@/context/General';
 
 interface SideLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
 	className?: string;
@@ -14,7 +15,8 @@ interface SideLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
 }
 
 const SideLink = ({ className, item, isHoveredLi }: SideLinkProps) => {
-	const { isRendered, route } = useSidebar();
+	const { route } = useGeneral();
+	const { isRendered } = useSidebar();
 	useRendering();
 
 	return (

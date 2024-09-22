@@ -18,7 +18,7 @@ const SideSpan = ({ children, className }: SideSpanProps) => {
 	return (
 		<span
 			className={twMerge(
-				`text-xl pl-4 ${
+				`text-lg pl-4 ${
 					isVisible ? 'translate-x-0' : '-translate-x-1 opacity-0'
 				} ${
 					!isRendered && 'w-0 overflow-hidden'

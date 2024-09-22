@@ -1,0 +1,77 @@
+[
+	{
+		"ocupacao": "Math Teacher",
+		"empresa": "CASD - Curso Alberto Santos Dumont",
+		"periodo": "Mar 2024 - Present",
+		"local": "São José dos Campos - SP",
+		"descricao": [
+			"Lecturing for +200 students in the nationally recognized best beneficent course in Brazil;",
+			"Looking forward to changing the lives of 14/15-year-old low-income people;",
+			"Producing custom, original and engaging educational material"
+		],
+		"skills": [
+			"Communication",
+			"Relationships",
+			"Education",
+			"Teaching",
+			"Organization"
+		]
+	},
+	{
+		"ocupacao": "Navigation Team Member",
+		"empresa": "eVTOL ITA",
+		"periodo": "Apr 2024 - Present",
+		"local": "São José dos Campos - SP",
+		"descricao": [
+			"Part of the team driving advancements in autonomous flight;",
+			"Developing and training datasets for precise target recognition;",
+			"Implementing gesture-based control systems for seamless flight"
+		],
+		"skills": ["C++", "Python", "Machine Learning"]
+	},
+	{
+		"ocupacao": "Competitive Programmer",
+		"empresa": "ITAbits",
+		"periodo": "Apr 2024 - Present",
+		"local": "São José dos Campos - SP",
+		"descricao": [
+			"Actively participating in competitive programming and programming marathons;",
+			"Tackling complex problem-solving challenges"
+		],
+		"skills": ["C++", "Problem-Solving", "Competitive Programming"]
+	},
+	{
+		"ocupacao": "Web3 Student",
+		"empresa": "ITA Blockchain Club",
+		"periodo": "Apr 2024 - Present",
+		"local": "São José dos Campos - SP",
+		"descricao": [
+			"Experiences in hackathons, fostering innovative solutions;",
+			"Exploring Web 3 technologies for decentralized applications"
+		],
+		"skills": [
+			"Blockchain",
+			"JavaScript",
+			"TypeScript",
+			"React.js",
+			"Front End"
+		]
+	},
+	{
+		"ocupacao": "Physics Teacher",
+		"empresa": "Nóiz Projeto Social - Gradua Nóiz",
+		"periodo": "Jun 2024 - Present",
+		"local": "São José dos Campos - SP",
+		"descricao": [
+			"Lecturing for underprivileged individuals aspiring to enter university;",
+			"Contributing to the Nóiz Projeto Social to support community education"
+		],
+		"skills": [
+			"Communication",
+			"Relationships",
+			"Education",
+			"Teaching",
+			"Organization"
+		]
+	}
+]

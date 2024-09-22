@@ -1,7 +1,9 @@
-export interface EducationItem {
-	name: string;
+import { BaseCard } from '@/interfaces/BaseCard';
+
+interface EducationItem extends BaseCard {
 	degree: string;
-	date: string;
 	location: string;
-	src: string;
+	date: string;
 }
+
+export default EducationItem;

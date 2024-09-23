@@ -3,7 +3,9 @@
 		"tag": "programmingLogic",
 		"name": "CS50'S INTRODUCTION TO PROGRAMMING WITH PYTHON",
 		"institution": "Harvard University",
-		"date": "2023",
+		"period": {
+			"end": "2023"
+		},
 		"skills": ["Python", "Problem Solving", "English"],
 		"certificate": {
 			"link": "https://certificates.cs50.io/a814bf8d-a03d-4f12-bd97-0080e882c6cf.pdf?size=letter",
@@ -15,7 +17,10 @@
 		"tag": "programmingLogic",
 		"name": "CES-10 & CES-11: INTRODUCTION TO COMPUTER SCIENCE",
 		"institution": "ITA",
-		"date": "2024",
+		"period": {
+			"start": "Mar 2024",
+			"end": "Dec 2024"
+		},
 		"skills": ["C", "Problem Solving", "Algorithms", "Data Structures"],
 		"src": "ita"
 	},
@@ -23,7 +28,9 @@
 		"tag": "webDevelopment",
 		"name": "REACT: DEVELOP WEB APPLICATIONS USING JSX AND HOOKS",
 		"institution": "Alura",
-		"date": "Jul 2024",
+		"period": {
+			"end": "Jul 2024"
+		},
 		"skills": ["React", "JavaScript", "CSS"],
 		"certificate": {
 			"link": "https://cursos.alura.com.br/degree/certificate/d3fa7213-636b-4ed9-98ee-9373124cfb6f?lang=pt_BR",
@@ -35,7 +42,9 @@
 		"tag": "webDevelopment",
 		"name": "FULL STACK JAVASCRIPT: CREATE A PROJECT WITH REACT AND NODE.JS",
 		"institution": "Alura",
-		"date": "Ago 2024",
+		"period": {
+			"end": "Ago 2024"
+		},
 		"skills": ["React", "Node.js", "JavaScript", "Express"],
 		"certificate": {
 			"link": "https://cursos.alura.com.br/degree/certificate/3f779039-1bcf-4ee3-908b-3de8ebe58ec1?lang=pt_BR",
@@ -47,7 +56,9 @@
 		"tag": "webDevelopment",
 		"name": "IMPROVE YOUR DEVELOPMENT EXPERIENCE WITH TYPESCRIPT",
 		"institution": "Alura",
-		"date": "May 2024",
+		"period": {
+			"end": "May 2024"
+		},
 		"skills": ["JavaScript", "TypeScript"],
 		"certificate": {
 			"link": "https://cursos.alura.com.br/degree/certificate/932c694e-b2f3-4eaa-9df3-af985ce0ed06?lang=pt_BR",
@@ -59,7 +70,9 @@
 		"tag": "programmingLogic",
 		"name": "STARTING FROM SCRATCH: BEGINNER IN PROGRAMMING",
 		"institution": "Alura",
-		"date": "Jun 2024",
+		"period": {
+			"end": "Jun 2024"
+		},
 		"skills": [
 			"JavaScript",
 			"Problem Solving",
@@ -76,7 +89,9 @@
 		"tag": "general",
 		"name": "ARTIFICIAL INTELLIGENCE IMMERSION",
 		"institution": "Alura",
-		"date": "2024",
+		"period": {
+			"end": "2024"
+		},
 		"skills": ["Python", "Google Gemini API", "Machine Learning"],
 		"certificate": {
 			"link": "imersao",
@@ -88,7 +103,9 @@
 		"tag": "general",
 		"name": "SIMPLIFICA EXCEL EXPRESS",
 		"institution": "Simplifica Treinamentos",
-		"date": "2024",
+		"period": {
+			"end": "2024"
+		},
 		"skills": ["Excel", "Dashboard", "Data Analysis"],
 		"certificate": {
 			"link": "simplifica",
@@ -100,7 +117,9 @@
 		"tag": "general",
 		"name": "OTHER COURSES FROM ALURA",
 		"institution": "Alura",
-		"date": "2024",
+		"period": {
+			"end": "2024"
+		},
 		"skills": ["C", "C++", "JavaScript", "PostgreSQL", "SQL"],
 		"certificate": {
 			"link": "https://cursos.alura.com.br/user/ianptkcs/fullCertificate/1045d336cd07a99c9b48634105c74835",

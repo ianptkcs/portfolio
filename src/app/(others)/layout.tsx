@@ -27,7 +27,7 @@ const OthersLayout = ({ children }: LayoutProps) => {
 					<span className='text-keyword'>{' =>'}</span>
 					<span className='text-brackets'> {'{'}</span>
 				</div>
-				<div className='ml-10'>{children}</div>
+				<div className='ml-10 w-full'>{children}</div>
 				<span className='text-brackets text-4xl'>
 					{'}'}
 					<span className='text-normal'>;</span>

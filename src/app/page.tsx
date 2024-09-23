@@ -3,8 +3,8 @@
 import React from 'react';
 import contactsJSON from '@/data/Contacts.json';
 import { ContactItem } from '@/interfaces/Home';
-import { getIcon } from '@/tools/iconMap';
-import { contactIconMap } from '@/tools/contactIconMap';
+import { getIcon } from '@/utils/iconMap';
+import { contactIconMap } from '@/utils/contactIconMap';
 import Link from 'next/link';
 import Button from '@/components/General/Button';
 import { FaDownload, FaUser } from 'react-icons/fa';

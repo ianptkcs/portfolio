@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 .custom-border {
-	@apply border-[1px] border-opacity-40 border-normal rounded-xl;
+	@apply border-[2px] border-opacity-40 border-normal rounded-xl;
 	box-shadow: 0 0 5px 0 rgb(146, 69, 255);
 }
 
 .custom-border-bottom {
-	@apply border-b-[1px] border-normal border-opacity-40 pb-1;
+	@apply border-b-[2px] border-normal border-opacity-40 pb-1;
 }
 .custom-border-right {
-	@apply border-r-[1px] border-normal border-opacity-40 pr-1;
+	@apply border-r-[2px] border-normal border-opacity-40 pr-1;
+	box-shadow: 0 0 5px 0 rgb(146, 69, 255);
 }

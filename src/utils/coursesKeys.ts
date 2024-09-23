@@ -2,7 +2,7 @@ import CoursesItem from '@/interfaces/CoursesItem';
 
 export const coursesKeys = (): (keyof CoursesItem)[] => [
 	'institution',
-	'date',
+	'period',
 	'skills',
 	'description',
 	'certificate',

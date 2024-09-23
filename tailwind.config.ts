@@ -35,6 +35,9 @@ const config: Config = {
 			padding: {
 				sidebar: `${(constants.sidebar.width * 4 * 5) / 16}px`,
 			},
+			listStyleType: {
+				square: 'square',
+			},
 		},
 	},
 	plugins: [],

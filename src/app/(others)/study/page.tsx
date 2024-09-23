@@ -6,29 +6,34 @@ import coursesJSON from '@/data/Courses.json';
 import Card from '@/components/Study/Card';
 import CodeTag from '@/components/General/CodeTag';
 import CoursesItem from '@/interfaces/CoursesItem';
-import { coursesKeys } from '@/tools/coursesKeys';
-import { educationKeys } from '@/tools/educationKeys';
-import { renderList } from '@/tools/renderList';
+import { coursesKeys } from '@/utils/coursesKeys';
+import { educationKeys } from '@/utils/educationKeys';
+import { renderList } from '@/utils/renderList';
 import Attribute from '@/components/Study/Attribute';
-import { sortAndGroupCourses } from '@/tools/sortDate';
-import CoursesTags from '@/enums/CoursesTags';
+import { sortAndGroupCourses } from '@/utils/sortCourses';
 
 const educationItems: EducationItem[] = educationJSON;
 const coursesItems: CoursesItem[] = coursesJSON;
 
 const StudyPage = () => {
 	// Ordena e agrupa os cursos por tag
-	const coursesGrouped = useMemo(() => sortAndGroupCourses(coursesItems), []);
+	const coursesGrouped = useMemo(
+		() => sortAndGroupCourses(coursesItems),
+		[coursesItems]
+	);
 
-	// Obtém as tags ordenadas com base na prioridade definida no enum
+	// Assuming you have the tagPriority mapping
+	const tagPriority: Record<string, number> = {
+		'Web Development': 1,
+		'Programming Logic': 2,
+		General: 3,
+	};
+
+	// Get the group keys (tags) from the grouped data
 	const orderedTags = useMemo(() => {
-		// Extrai as chaves (tags) do objeto agrupado
-		const tags = Object.keys(coursesGrouped) as unknown as CoursesTags[];
-
-		// Ordena as tags com base na prioridade do enum
-		return tags.sort((a, b) => {
-			const priorityA = CoursesTags[a] as unknown as number;
-			const priorityB = CoursesTags[b] as unknown as number;
+		return Object.keys(coursesGrouped).sort((a, b) => {
+			const priorityA = tagPriority[a] || Number.MAX_SAFE_INTEGER;
+			const priorityB = tagPriority[b] || Number.MAX_SAFE_INTEGER;
 			return priorityA - priorityB;
 		});
 	}, [coursesGrouped]);
@@ -60,6 +65,7 @@ const StudyPage = () => {
 			<CodeTag
 				tag='Courses'
 				className='text-xl'
+				hasChildren={false}
 			>
 				<ul className='flex flex-col gap-10'>
 					{orderedTags.map(
@@ -67,7 +73,7 @@ const StudyPage = () => {
 							coursesGrouped[tag] && (
 								<Attribute
 									key={tag}
-									text={tag.toString()}
+									text={tag}
 								>
 									<ul className='flex flex-wrap gap-10'>
 										{coursesGrouped[tag].map((item) => (

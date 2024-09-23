@@ -1,12 +1,10 @@
 import { BaseCard } from '@/interfaces/BaseCard';
 
-interface CoursesItem extends BaseCard {
-	tag: string;
-	institution: string;
+export interface ProjectsItem extends BaseCard {
+	status: string;
+	resume: string;
 	period: Period;
-	skills: string[];
-	description?: string[];
-	certificate?: Link;
+	link: Link;
 }
 
 interface Period {
@@ -18,5 +16,3 @@ interface Link {
 	name: string;
 	link: string;
 }
-
-export default CoursesItem;

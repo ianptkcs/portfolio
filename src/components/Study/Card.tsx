@@ -11,7 +11,7 @@ interface CardProps<T> {
 const Card = <T extends BaseCard>({ item, children }: CardProps<T>) => {
 	return (
 		<div className='flex flex-col p-3 gap-4 w-[500px] custom-border text-normal text-lg'>
-			<div className='flex justify-between h-[64px] pr-5 px-1 gap-4 items-center w-full border-b-[1px] border-home-normal border-opacity-40 pb-1'>
+			<div className='flex justify-between h-[64px] pr-5 px-1 gap-4 items-center w-full custom-border-bottom'>
 				<div className='relative h-full'>
 					<Image
 						src={`/assets/${item.src}.png`}
@@ -19,7 +19,7 @@ const Card = <T extends BaseCard>({ item, children }: CardProps<T>) => {
 						height={64}
 						width={64}
 						unoptimized
-						className='rounded-xl p-2 w-auto h-full object-cover'
+						className='rounded-xl w-auto h-full object-cover'
 					/>
 				</div>
 				<span className='text-lg text-end font-bold w-fit'>

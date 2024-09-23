@@ -1,12 +1,15 @@
 [
 	{
-		"ocupacao": "Math Teacher",
-		"empresa": "CASD - Curso Alberto Santos Dumont",
-		"periodo": "Mar 2024 - Present",
+		"status": "present",
+		"ocupation": "Math Teacher",
+		"name": "CASD - Curso Alberto Santos Dumont",
+		"period": {
+			"start": "Mar 2024"
+		},
 		"local": "São José dos Campos - SP",
-		"descricao": [
-			"Lecturing for +200 students in the nationally recognized best beneficent course in Brazil;",
-			"Looking forward to changing the lives of 14/15-year-old low-income people;",
+		"description": [
+			"Lecturing for +200 students in the nationally recognized best beneficent course in Brazil",
+			"Looking forward to changing the lives of 14/15-year-old low-income people",
 			"Producing custom, original and engaging educational material"
 		],
 		"skills": [
@@ -15,38 +18,52 @@
 			"Education",
 			"Teaching",
 			"Organization"
-		]
+		],
+		"src": "casd"
 	},
 	{
-		"ocupacao": "Navigation Team Member",
-		"empresa": "eVTOL ITA",
-		"periodo": "Apr 2024 - Present",
+		"status": "present",
+		"ocupation": "Navigation Team Member",
+		"name": "eVTOL ITA",
+		"period": {
+			"start": "Mar 2024"
+		},
 		"local": "São José dos Campos - SP",
-		"descricao": [
-			"Part of the team driving advancements in autonomous flight;",
-			"Developing and training datasets for precise target recognition;",
+		"description": [
+			"Part of the team driving advancements in autonomous flight",
+			"Developing and training datasets for precise target recognition",
 			"Implementing gesture-based control systems for seamless flight"
 		],
-		"skills": ["C++", "Python", "Machine Learning"]
+		"skills": ["C++", "Python", "Machine Learning"],
+		"src": "evtol"
 	},
 	{
-		"ocupacao": "Competitive Programmer",
-		"empresa": "ITAbits",
-		"periodo": "Apr 2024 - Present",
+		"status": "past",
+		"ocupation": "Competitive Programmer",
+		"name": "ITAbits",
+		"period": {
+			"start": "Apr 2024",
+			"end": "Aug 2024"
+		},
 		"local": "São José dos Campos - SP",
-		"descricao": [
-			"Actively participating in competitive programming and programming marathons;",
+		"description": [
+			"Actively participating in competitive programming and programming marathons",
 			"Tackling complex problem-solving challenges"
 		],
-		"skills": ["C++", "Problem-Solving", "Competitive Programming"]
+		"skills": ["C++", "Problem-Solving", "Competitive Programming"],
+		"src": "bits"
 	},
 	{
-		"ocupacao": "Web3 Student",
-		"empresa": "ITA Blockchain Club",
-		"periodo": "Apr 2024 - Present",
+		"status": "past",
+		"ocupation": "Web3 Student",
+		"name": "ITA Blockchain Club",
+		"period": {
+			"start": "Apr 2024",
+			"end": "Sep 2024"
+		},
 		"local": "São José dos Campos - SP",
-		"descricao": [
-			"Experiences in hackathons, fostering innovative solutions;",
+		"description": [
+			"Experiences in hackathons, fostering innovative solutions",
 			"Exploring Web 3 technologies for decentralized applications"
 		],
 		"skills": [
@@ -55,15 +72,19 @@
 			"TypeScript",
 			"React.js",
 			"Front End"
-		]
+		],
+		"src": "blockchain"
 	},
 	{
-		"ocupacao": "Physics Teacher",
-		"empresa": "Nóiz Projeto Social - Gradua Nóiz",
-		"periodo": "Jun 2024 - Present",
+		"status": "present",
+		"ocupation": "Physics Teacher",
+		"name": "Nóiz Projeto Social - Gradua Nóiz",
+		"period": {
+			"start": "Jun 2024"
+		},
 		"local": "São José dos Campos - SP",
-		"descricao": [
-			"Lecturing for underprivileged individuals aspiring to enter university;",
+		"description": [
+			"Lecturing for underprivileged individuals aspiring to enter university",
 			"Contributing to the Nóiz Projeto Social to support community education"
 		],
 		"skills": [
@@ -72,6 +93,7 @@
 			"Education",
 			"Teaching",
 			"Organization"
-		]
+		],
+		"src": "noiz"
 	}
 ]

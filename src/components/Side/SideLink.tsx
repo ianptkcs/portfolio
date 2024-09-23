@@ -1,11 +1,11 @@
 import { SidebarItem } from '@/interfaces/Sidebar';
-import { getIcon } from '@/tools/iconMap';
+import { getIcon } from '@/utils/iconMap';
 import Link from 'next/link';
 import React from 'react';
 import SideSpan from './SideSpan';
 import useRendering from '@/hooks/useRendering';
 import { useSidebar } from '@/context/Sidebar';
-import { sideIconMap } from '@/tools/sideIconMap';
+import { sideIconMap } from '@/utils/sideIconMap';
 import { useGeneral } from '@/context/General';
 
 interface SideLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {

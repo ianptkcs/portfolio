@@ -1,5 +1,4 @@
 import ListItem from '@/components/Study/ListItem';
-import { List } from 'lucide-react';
 import React from 'react';
 import { FaDownload, FaLink } from 'react-icons/fa';
 import { computePeriod } from './computePeriod';

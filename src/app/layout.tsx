@@ -5,7 +5,7 @@ import Sidebar from '@/components/General/Sidebar';
 import Header from '@/components/General/Header';
 import { GeneralProvider } from '@/context/General';
 
-export const sourceCodePro = localFont({
+const sourceCodePro = localFont({
 	src: './fonts/SourceCodePro-VariableFont_wght.ttf',
 	variable: '--font-source-code-pro',
 	weight: '100 900',

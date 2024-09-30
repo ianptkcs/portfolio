@@ -11,10 +11,7 @@ import { experienceKeys } from '@/utils/experienceKeys';
 const experienceItems: ExperienceItem[] = experienceJSON;
 
 const ExperiencePage = () => {
-	const experiencesGrouped = useMemo(
-		() => sortAndGroupExperiences(experienceItems),
-		[experienceItems]
-	);
+	const experiencesGrouped = sortAndGroupExperiences(experienceItems);
 
 	const statusPriority: Record<string, number> = {
 		present: 1,

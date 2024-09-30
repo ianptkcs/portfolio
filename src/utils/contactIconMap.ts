@@ -1,4 +1,10 @@
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import {
+	FaGithub,
+	FaInstagram,
+	FaLinkedin,
+	FaEnvelope,
+	FaWhatsapp,
+} from 'react-icons/fa';
 import { LucideProps } from 'lucide-react';
 
 export const contactIconMap: {
@@ -7,4 +13,6 @@ export const contactIconMap: {
 	GitHub: FaGithub,
 	LinkedIn: FaLinkedin,
 	Instagram: FaInstagram,
+	Email: FaEnvelope,
+	WhatsApp: FaWhatsapp,
 };

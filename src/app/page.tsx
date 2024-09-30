@@ -6,7 +6,7 @@ import { ContactItem } from '@/interfaces/Home';
 import { getIcon } from '@/utils/iconMap';
 import { contactIconMap } from '@/utils/contactIconMap';
 import Link from 'next/link';
-import Button from '@/components/General/Button';
+import CustomLink from '@/components/General/CustomLink';
 import { FaDownload, FaUser } from 'react-icons/fa';
 import RPGSheet from '@/components/General/RPGSheet';
 
@@ -48,8 +48,23 @@ const HomePage = () => {
 					))}
 				</ul>
 				<ul className='flex gap-10'>
-					<Button icon={FaUser}>Let&apos;s talk</Button>
-					<Button icon={FaDownload}>Get Resume</Button>
+					<CustomLink
+						href={
+							contacts.filter((contact) => {
+								return contact.name === 'Email';
+							})[0].link
+						}
+					>
+						Let&apos;s talk
+						<FaUser className='inline ml-2 opacity-80' />
+					</CustomLink>
+					<CustomLink
+						href='/docs/cv.pdf'
+						download='Ian_Soares_CV.pdf'
+					>
+						Get Resume
+						<FaDownload className='inline ml-2 opacity-80' />
+					</CustomLink>
 				</ul>
 			</div>
 			<div className='col-span-3'>

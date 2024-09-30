@@ -42,11 +42,13 @@ const RPGSheet = () => {
 								label='attributes'
 								span='Attribute[]'
 								type='variables'
+								operator=': '
 							/>
 							<Property
 								label='pages'
 								span='Page[]'
 								type='variables'
+								operator=': '
 							/>
 							<Method label='attributes'>
 								<ul className='flex flex-col pl-4'>

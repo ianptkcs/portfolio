@@ -7,6 +7,7 @@ interface PropertyProps {
 	label: string;
 	span: string;
 	type: string;
+	operator?: string;
 	isMethodProperty?: boolean;
 	isLink?: boolean;
 	className?: string;
@@ -16,6 +17,7 @@ const Property = ({
 	label,
 	span,
 	type,
+	operator = ' =',
 	isMethodProperty,
 	isLink,
 	className,
@@ -45,6 +47,7 @@ const Property = ({
 				htmlFor='span'
 				isMethodProperty={isMethodProperty}
 				labelNode={<span>{label}</span>}
+				operator={operator}
 			>
 				{' '}
 				<span

@@ -16,6 +16,6 @@ export const sortAndGroupProjects = (projects: ProjectsItem[]) => {
 		secondarySortKeyFn: (item) =>
 			parseDateString(item.period.end).getTime(),
 		groupingKeyFn: (item) => item.status,
-		sortOrder: 'asc', // Adjust if needed
+		sortOrder: 'desc', // Adjust if needed
 	});
 };

@@ -1,32 +1,33 @@
-import { LucideProps } from 'lucide-react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 import '@/styles/custom.css';
 
-interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface CustomLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
 	className?: string;
-	icon: React.ComponentType<LucideProps>;
 	children?: React.ReactNode;
+	href: string;
+	download?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const CustomLink: React.FC<CustomLinkProps> = ({
 	className,
-	icon: Icon,
 	children,
+	href,
 	...props
 }) => {
 	return (
-		<button
+		<a
+			href={href}
 			className={twMerge(
 				`flex gap-2 items-center py-2 px-8 bg-button hover:bg-button-hover rounded-md text-xl font-bold text-normal hover:scale-105 transition-all duration-300 custom-shadow`,
 				className
 			)}
 			{...props}
+			download={props.download}
 		>
 			{children}
-			<Icon className='inline ml-2 opacity-80' />
-		</button>
+		</a>
 	);
 };
 
-export default Button;
+export default CustomLink;

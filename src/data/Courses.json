@@ -126,5 +126,19 @@
 			"name": "Link"
 		},
 		"src": "alura"
+	},
+	{
+		"tag": "webDevelopment",
+		"name": "FULL STACK: DJANGO & REACT",
+		"institution": "Tech With Tim",
+		"period": {
+			"end": "Oct 2024"
+		},
+		"certificate": {
+			"link": "https://youtube.com/playlist?list=PLzMcBGfZo4-kCLWnGmK0jUBmGLaJxvi4j&si=XtxWh9ZVcyjI0B2J",
+			"name": "Link"
+		},
+		"skills": ["Django", "React", "Python", "TypeScript", "Cookies"],
+		"src": "YouTube"
 	}
 ]

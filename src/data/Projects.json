@@ -37,5 +37,18 @@
 			"link": "https://onepieceplus.vercel.app/",
 			"name": "Link"
 		}
+	},
+	{
+		"status": "completed",
+		"name": "Spotify ROom",
+		"period": {
+			"end": "Oct 2024"
+		},
+		"resume": "Spotify ROom is a collaborative music player that allows users to create and join rooms to listen to music together. It is a full-stack project developed with Next.js and Django",
+		"src": "foto",
+		"link": {
+			"link": "https://github.com/ianptkcs/fullstack-django-react",
+			"name": "Link"
+		}
 	}
 ]

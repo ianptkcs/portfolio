@@ -1,101 +1,108 @@
-import Image from "next/image";
+import { Github, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+interface ContactItemInterface {
+	icon: React.ElementType;
+	text: string;
+	url: string;
+}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+const IconSize = 36;
+
+const Contacts: ContactItemInterface[] = [
+	{
+		icon: Github,
+		text: 'GitHub',
+		url: 'https://github.com/ianptkcs',
+	},
+	{
+		icon: Linkedin,
+		text: 'LinkedIn',
+		url: 'https://www.linkedin.com/in/ianptkcs/',
+	},
+	{
+		icon: Phone,
+		text: 'Phone',
+		url: 'https://wa.me/5531998490641',
+	},
+	{
+		icon: Mail,
+		text: 'Email',
+		url: 'mailto:ianptkcs@gmail.com',
+	},
+	{
+		icon: Instagram,
+		text: 'Instagram',
+		url: 'https://www.instagram.com/ianptkcs/',
+	},
+];
+
+export default function HomePage() {
+	return (
+		<div className="flex px-20 gap-20">
+			<div className="flex flex-col h-full w-full pt-28 pb-10 gap-10">
+				<div className="flex flex-col gap-4">
+					<h1 className="text-5xl font-bold text-foreground">
+						Hello!
+					</h1>
+					<p className="text-4xl">
+						I'm Ian Soares, a Fullstack Developer and a Private
+						Teacher.
+					</p>
+				</div>
+				<div className="flex flex-col gap-2">
+					<p className="text-lg font-semibold">Contact me:</p>
+					<ul className="flex flex-wrap gap-5">
+						{Contacts.map((contact) => {
+							return (
+								<ContactItem
+									contactItem={contact}
+									key={contact.text}
+								/>
+							);
+						})}
+					</ul>
+				</div>
+				<div className="flex flex-col gap-2">
+					<p className="text-lg font-bold">More about me:</p>
+					<p className="text-lg">
+						I’m a creative soul who loves dreaming up new things.
+						I’m passionate about art, solving problems, and puzzles,
+						which is why I fell in love with programming. I believe
+						knowledge is power, so I’m always learning. I love
+						sharing what I know and contributing however I can.
+						Every challenge is a chance to grow and create something
+						awesome!
+					</p>
+				</div>
+			</div>
+			<img
+				src="/eu-dnv.jpg"
+				alt="eu-dnv"
+				className="h-[90vh] rounded-lg border-2 border-black shadow-lg object-cover p-1"
+			/>
+		</div>
+	);
+}
+
+function ContactItem({
+	contactItem,
+	...rest
+}: {
+	contactItem: ContactItemInterface;
+} & React.HTMLAttributes<HTMLLIElement>) {
+	return (
+		<li className="flex items-center gap-5" {...rest}>
+			<Link
+				className="flex items-center gap-2 p-2 rounded-lg border-2 border-black shadow-lg hover:bg-primary-300 hover:text-text-purplePrimary hover:scale-105 transition-all duration-300 ease-in-out  "
+				href={contactItem.url}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<contactItem.icon size={IconSize} />
+				<p className="text-lg">{contactItem.text}</p>
+			</Link>
+		</li>
+	);
 }

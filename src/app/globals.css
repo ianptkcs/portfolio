@@ -8,8 +8,14 @@ body {
 
 @layer base {
 	:root {
-		--background: 0 0% 100%;
-		--foreground: 240 10% 3.9%;
+		--sidebar-width: 16rem;
+		--background: 42, 45%, 90%;
+		--foreground: 35 27% 60%;
+		--background-sidebar: 35 27% 60%;
+		--background-button: 28, 22%, 28%;
+		--text-primary: 28 75% 8%;
+		--text-strong: 128 75% 24%;
+		--border: 28 75% 8%;
 		--card: 0 0% 100%;
 		--card-foreground: 240 10% 3.9%;
 		--popover: 0 0% 100%;
@@ -24,7 +30,6 @@ body {
 		--accent-foreground: 240 5.9% 10%;
 		--destructive: 0 84.2% 60.2%;
 		--destructive-foreground: 0 0% 98%;
-		--border: 240 5.9% 90%;
 		--input: 240 5.9% 90%;
 		--ring: 240 10% 3.9%;
 		--chart-1: 12 76% 61%;
@@ -35,8 +40,13 @@ body {
 		--radius: 0.5rem;
 	}
 	.dark {
-		--background: 240 10% 3.9%;
+		--background: 75 12.5% 6.3%;
 		--foreground: 0 0% 98%;
+		--background-sidebar: 72 4.1% 19%;
+		--background-button: 72 2.5% 38.6%;
+		--text-primary: 60 2.6% 78%;
+		--text-strong: 252 100% 72%;
+		--border: 60 2.6% 78%;
 		--card: 240 10% 3.9%;
 		--card-foreground: 0 0% 98%;
 		--popover: 240 10% 3.9%;
@@ -51,7 +61,6 @@ body {
 		--accent-foreground: 0 0% 98%;
 		--destructive: 0 62.8% 30.6%;
 		--destructive-foreground: 0 0% 98%;
-		--border: 240 3.7% 15.9%;
 		--input: 240 3.7% 15.9%;
 		--ring: 240 4.9% 83.9%;
 		--chart-1: 220 70% 50%;
@@ -59,6 +68,50 @@ body {
 		--chart-3: 30 80% 55%;
 		--chart-4: 280 65% 60%;
 		--chart-5: 340 75% 55%;
+	}
+}
+
+.hover-underline-animation {
+	@apply inline-block relative;
+}
+
+.hover-underline-animation::after {
+	@apply bg-text-primary content-[''] absolute w-full scale-x-0 h-[2px] bottom-0 left-0 origin-left transition-all ease-in-out duration-300;
+}
+
+.hover-underline-animation:hover::after {
+	@apply scale-x-100;
+}
+
+.default-border {
+	@apply border-border shadow-[0_3px_4px_-1px] shadow-border;
+
+	&.no-top {
+		@apply border-2 border-t-0 rounded-b-lg;
+	}
+
+	&.no-bottom {
+		@apply border-2 border-b-0 rounded-t-lg;
+	}
+
+	&.all {
+		@apply border-2 rounded-lg;
+	}
+
+	&.all-no-rounded {
+		@apply border-2;
+	}
+
+	&.no-shadow {
+		@apply shadow-none;
+	}
+}
+
+.default-page-div {
+	@apply flex flex-col h-full pt-sidebar2 pb-sidebar4 pl-sidebar4 gap-sidebar4;
+
+	&.less-padding-top {
+		@apply pt-sidebar6;
 	}
 }
 

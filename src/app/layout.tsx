@@ -33,10 +33,10 @@ export default function RootLayout({
 					defaultTheme="dark"
 					disableTransitionOnChange
 				>
-					{/* <div className="fixed top-4 right-4">
-                        <ThemeToggle />
-                    </div> */}
-					<main className="flex items-center justify-center h-screen pl-64">
+					<div className="fixed top-4 right-4 bg-gray-800">
+						<ThemeToggle />
+					</div>
+					<main className="h-screen pl-sidebar54">
 						<Sidebar />
 						{children}
 					</main>

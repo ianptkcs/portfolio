@@ -1,0 +1,54 @@
+[
+	{
+		"institution": "Alura",
+		"title": "Fullstack Development",
+		"date": {
+			"start": "Apr 2024"
+		},
+		"location": "Online",
+		"src": "alura.png",
+		"certificate": {
+			"src": "https://cursos.alura.com.br/user/ianptkcs/fullCertificate/1045d336cd07a99c9b48634105c74835",
+			"type": "Link"
+		},
+		"skills": [
+			"JavaScript",
+			"React",
+			"Node.js",
+			"HTML",
+			"CSS",
+			"Express",
+			"Git and GitHub",
+			"Programming Logic",
+			"TypeScript"
+		]
+	},
+	{
+		"institution": "Technological Institute of Aeronautics",
+		"title": "Bachelor of Science in Computer Engineering",
+		"date": {
+			"start": "Mar 2024",
+			"end": "Dec 2024"
+		},
+		"location": "São José dos Campos, SP",
+		"src": "ita.png",
+		"skills": [
+			"Calculus",
+			"Analytical Geometry",
+			"Physics",
+			"C/C++",
+			"Linear Algebra"
+		]
+	},
+	{
+		"institution": "Newton Paiva",
+		"title": "Bachelor of Science in Computer and Information Systems",
+		"date": {
+			"start": "Feb 2025",
+			"end": "Dec 2028"
+		},
+		"location": "Belo Horizonte, MG",
+		"src": "newton.png",
+		"skills": []
+	}
+]

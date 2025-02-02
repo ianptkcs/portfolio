@@ -12,14 +12,12 @@ export default {
 			colors: {
 				text: {
 					primary: 'hsl(var(--text-primary))',
-					secondary: 'hsl(var(--text-secondary))',
-					purplePrimary: '#4338ca',
-					purpleSecondary: '#6366f1',
+					strong: 'hsl(var(--text-strong))',
 				},
 				background: {
 					DEFAULT: 'hsl(var(--background))',
-					sidebar: '#d1d5db',
-					tertiary: '#f9fafb',
+					sidebar: 'hsl(var(--background-sidebar))',
+					button: 'hsl(var(--background-button))',
 				},
 				foreground: 'hsl(var(--foreground))',
 				card: {
@@ -65,6 +63,25 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)',
+			},
+			width: {
+				sidebar: 'var(--sidebar-width)',
+				sidebar34: 'calc(var(--sidebar-width) * 3 / 4)',
+			},
+			inset: {
+				sidebar4: 'calc(var(--sidebar-width) / 4)',
+			},
+			padding: {
+				sidebar6: 'calc(var(--sidebar-width) / 6)',
+				sidebar4: 'calc(var(--sidebar-width) / 4)',
+				sidebar34: 'calc(var(--sidebar-width) * 3 / 4)',
+				sidebar2: 'calc(var(--sidebar-width) / 2)',
+				sidebar54:
+					'calc(var(--sidebar-width) + var(--sidebar-width) / 4)',
+			},
+			gap: {
+				sidebar4: 'calc(var(--sidebar-width) / 4)',
+				sidebar8: 'calc(var(--sidebar-width) / 8)',
 			},
 		},
 	},

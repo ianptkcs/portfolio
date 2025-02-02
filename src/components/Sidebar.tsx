@@ -5,71 +5,71 @@ import { Avatar } from '@radix-ui/react-avatar';
 import React, { useState } from 'react';
 import { AvatarFallback, AvatarImage } from './ui/avatar';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
+import sidebar from '@/styles/sidebar.module.css';
 
 const SidebarItems: ItemLabel[] = [
 	{ label: 'Home', value: '/' },
 	{ label: 'About', value: '/about' },
-	{ label: 'Education', value: '/education' },
+	{ label: 'Tutoring', value: '/tutoring' },
+	{ label: 'Programming', value: '/programming' },
 	{ label: 'Projects', value: '/projects' },
-	{ label: 'Experience', value: '/experience' },
+	{ label: 'Education', value: '/education' },
 ];
 
 export default function Sidebar() {
-	let { value } = useParams();
-	if (!value) {
-		value = '/';
-	}
+	const pathname = usePathname();
 
 	return (
-		<div className="flex fixed top-0 left-0 h-screen">
-			<aside className="flex flex-col justify-start items-center pt-12 w-64 bg-gray-300 gap-5">
-				<div className="flex flex-col justify-center items-center space-y-4">
-					<Avatar>
-						<AvatarImage
-							src="/eu.jpg"
-							alt="Ian Soares"
-							className="rounded-full w-48 h-48 border-2 border-black shadow-lg object-cover"
-						/>
-						<AvatarFallback delayMs={1000}>IS</AvatarFallback>
-					</Avatar>
-					<div className="flex flex-col itmes-center justify-center text-center gap-2">
-						<h1 className="text-foreground text-xl">
-							IAN <b>SOARES</b>
-						</h1>
-						<div className="flex flex-col">
-							<span className="text-text-purplePrimary text-lg">
-								Fullstack Developer
-							</span>
-							<span className="text-text-purplePrimary text-lg">
-								Private Teacher
-							</span>
-						</div>
+		<aside className="flex fixed top-0 left-sidebar4 w-sidebar h-[90vh] flex-col justify-start items-center pt-12 bg-background-sidebar gap-sidebar8 default-border no-top">
+			<div className="flex flex-col justify-center items-center space-y-4">
+				<Avatar>
+					<AvatarImage
+						src="/eu.jpg"
+						alt="Ian Soares"
+						className="rounded-full w-sidebar34 aspect-square default-border all-no-rounded object-cover"
+					/>
+					<AvatarFallback delayMs={1000}>IS</AvatarFallback>
+				</Avatar>
+				<div className="flex flex-col itmes-center justify-center text-center gap-2">
+					<h1 className="text-text-primary text-xl">
+						IAN <b>SOARES</b>
+					</h1>
+					<div className="flex flex-col">
+						<span className="text-text-strong text-lg font-semibold">
+							Fullstack Developer
+						</span>
+						<span className="text-text-strong text-lg font-semibold">
+							Private Teacher
+						</span>
 					</div>
 				</div>
-				<nav>
-					<ul className="flex flex-col gap-4">
-						{SidebarItems.map((item) => (
-							<li
-								key={item.value}
-								className={`text-primary-300 text-center ${
-									item.value === value
-										? 'text-text-purpleSecondary font-bold'
-										: ''
+			</div>
+			<div className="h-[1px] w-4/5 bg-border shadow-sm shadow-border"></div>
+			<nav>
+				<ul className="flex flex-col gap-3">
+					{SidebarItems.map((item) => (
+						<li
+							key={item.value}
+							className={`text-text-primary text-center ${
+								item.value === pathname
+									? 'text-text-strong font-bold uppercase'
+									: ''
+							}`}
+						>
+							<Link
+								href={item.value}
+								className={`text-xl hover-underline-animation ${
+									item.value === pathname &&
+									'after:bg-text-strong'
 								}`}
 							>
-								<Link
-									href={item.value}
-									className="text-xl hover:underline transition-all duration-300"
-								>
-									{item.label}
-								</Link>
-							</li>
-						))}
-					</ul>
-				</nav>
-			</aside>
-			<div className="h-screen w-[1px] opacity-75 bg-black"></div>
-		</div>
+								{item.label}
+							</Link>
+						</li>
+					))}
+				</ul>
+			</nav>
+		</aside>
 	);
 }

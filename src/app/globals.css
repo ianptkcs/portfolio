@@ -108,7 +108,11 @@ body {
 }
 
 .default-page-div {
-	@apply flex flex-col h-full pt-sidebar2 pb-sidebar4 pl-sidebar4 gap-sidebar4;
+	@apply flex flex-col h-full pt-sidebar2 pb-sidebar4 pl-sidebar4 pr-sidebar34 gap-sidebar4;
+
+	&.less-gap {
+		@apply gap-5;
+	}
 
 	&.less-padding-top {
 		@apply pt-sidebar6;

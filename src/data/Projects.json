@@ -1,0 +1,60 @@
+[
+	{
+		"title": "OnePiece+ Marketing",
+		"description": "Created a promotional site for a fictional application called OnePiece+.",
+		"src": "opp-mkt.png",
+		"date": {
+			"end": "Jun 2024"
+		},
+		"skills": ["HTML", "CSS"],
+		"link": "https://onepieceplus.vercel.app/"
+	},
+	{
+		"title": "OnePiece+",
+		"description": "Developed a mobile-first design for an application called OnePiece+.",
+		"src": "opp.png",
+		"date": {
+			"end": "Jun 2024"
+		},
+		"skills": ["HTML", "CSS"],
+		"link": "https://onepieceplus-design-1.vercel.app/"
+	},
+	{
+		"title": "OnePiece Wallpapers",
+		"description": "Created a fictional site for One Piece wallpapers.",
+		"src": "opp-wpp.png",
+		"date": {
+			"end": "Jul 2024"
+		},
+		"skills": ["React", "Vite", "Styled Components", "JavaScript"],
+		"link": "https://onepiecewallpapers.vercel.app/"
+	},
+	{
+		"title": "First Portfolio",
+		"description": "My first portfolio site, visually inspired by RPGs, programming and gaming.",
+		"src": "first-port.png",
+		"date": {
+			"end": "Dec 2024"
+		},
+		"skills": ["Next.js", "TypeScript", "Tailwind CSS"],
+		"link": "https://portfolio-sooty-kappa-79.vercel.app/"
+	},
+	{
+		"title": "Let's Dice",
+		"description": "A social media platform for tabletop RPG players to connect, find gaming tables, and organize sessions, creating a community for RPG enthusiasts.",
+		"src": "lets-dice.png",
+		"date": {
+			"start": "Jan 2025"
+		},
+		"skills": [
+			"React",
+			"Next.js",
+			"TypeScript",
+			"Prisma",
+			"PostgreSQL",
+			"Docker",
+			"Tailwind CSS"
+		],
+		"link": "https://letsdice.vercel.app/"
+	}
+]

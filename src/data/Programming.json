@@ -1,0 +1,30 @@
+[
+	{
+		"title": "Student Clubs",
+		"institution": "Technological Institute of Aeronautics (ITA)",
+		"src": "ita.png",
+		"date": {
+			"start": "Mar 2024",
+			"end": "Dec 2024"
+		},
+		"location": "São José dos Campos, SP",
+		"description": "I have been an active member of the ITA community, participating in various student clubs and extracurricular activities. I have been involved in the ITABits, the ITA Blockchain Club, and the eVTOL ITA, where I have had the opportunity to develop my skills and knowledge in these areas.",
+		"skills": [
+			"Problem-solving",
+			"Teamwork",
+			"Blockchain",
+			"Machine Learning"
+		]
+	},
+	{
+		"title": "Fullstack Developer",
+		"institution": "Ensino Ágil",
+		"src": "ea.png",
+		"date": {
+			"start": "Jan 2025"
+		},
+		"location": "Online",
+		"description": "As a full-stack developer, I have been contributing to the development of a white-label educational platform, working with Django for the backend and Angular for the frontend. My role involves building scalable solutions, ensuring seamless integration, and enhancing the platform's usability to meet the needs of educators and learners.",
+		"skills": ["Angular", "TypeScript", "Django", "Python", "ClickUp"]
+	}
+]

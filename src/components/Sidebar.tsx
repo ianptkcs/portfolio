@@ -2,11 +2,10 @@
 
 import ItemLabel from '@/interfaces/Items';
 import { Avatar } from '@radix-ui/react-avatar';
-import React, { useState } from 'react';
+import React from 'react';
 import { AvatarFallback, AvatarImage } from './ui/avatar';
 import Link from 'next/link';
-import { useParams, usePathname } from 'next/navigation';
-import sidebar from '@/styles/sidebar.module.css';
+import { usePathname } from 'next/navigation';
 
 const SidebarItems: ItemLabel[] = [
 	{ label: 'Home', value: '/' },

@@ -3,7 +3,13 @@ import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar';
 import Badge from './Badge';
 import { Experience } from '@/interfaces/Experience';
 
-export function DefaultCard({ item }: { item: Experience }) {
+export function DefaultCard({
+	item,
+	children,
+}: {
+	item: Experience;
+	children?: React.ReactNode;
+}) {
 	return (
 		<div className="flex flex-col gap-4 bg-background default-border all p-3">
 			<div className="flex justify-between">
@@ -14,7 +20,9 @@ export function DefaultCard({ item }: { item: Experience }) {
 							alt={item.institution}
 							className="default-border all no-shadow h-20 aspect-auto object-cover p-2"
 						/>
-						<AvatarFallback>{item.institution}</AvatarFallback>
+						<AvatarFallback className="text-lg text-text-primary font-semibold">
+							{item.institution}
+						</AvatarFallback>
 					</Avatar>
 					<div className="flex flex-col gap-1 text-text-primary text-lg">
 						<p className="text-text-strong font-bold">
@@ -25,7 +33,8 @@ export function DefaultCard({ item }: { item: Experience }) {
 				</div>
 				<div className="flex flex-col gap-1 text-text-primary text-lg text-right">
 					<p className="text-text-primary text-lg">
-						{item.date.start} - {item.date.end || 'Present'}
+						{item.date.start && `${item.date.start} -`}{' '}
+						{item.date.end ? item.date.end : 'Present'}
 					</p>
 					<p className="text-text-primary text-lg">{item.location}</p>
 				</div>
@@ -35,6 +44,7 @@ export function DefaultCard({ item }: { item: Experience }) {
 					{item.description}
 				</p>
 			)}
+			{children}
 			<div className="flex flex-wrap gap-2">
 				{item.skills.map((skill) => (
 					<Badge text={skill} key={skill} />

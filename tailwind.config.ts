@@ -67,6 +67,11 @@ export default {
 			width: {
 				sidebar: 'var(--sidebar-width)',
 				sidebar34: 'calc(var(--sidebar-width) * 3 / 4)',
+				sidebar4: 'calc(var(--sidebar-width) / 4)',
+			},
+			height: {
+				sidebar: 'var(--sidebar-height)',
+				sidebar8: 'calc(var(--sidebar-height) / 8)',
 			},
 			inset: {
 				sidebar4: 'calc(var(--sidebar-width) / 4)',
@@ -76,8 +81,8 @@ export default {
 				sidebar4: 'calc(var(--sidebar-width) / 4)',
 				sidebar34: 'calc(var(--sidebar-width) * 3 / 4)',
 				sidebar2: 'calc(var(--sidebar-width) / 2)',
-				sidebar54:
-					'calc(var(--sidebar-width) + var(--sidebar-width) / 4)',
+				sidebar54: 'calc(var(--sidebar-width) * 5 / 4)',
+				sidebar32: 'calc(var(--sidebar-width) * 3 / 2)',
 			},
 			gap: {
 				sidebar4: 'calc(var(--sidebar-width) / 4)',

@@ -69,6 +69,18 @@ body {
 		--chart-4: 280 65% 60%;
 		--chart-5: 340 75% 55%;
 	}
+
+	@media (max-width: 1280px) {
+		:root {
+			--sidebar-width: 12rem; /* Largura da sidebar para telas menores */
+		}
+	}
+
+	@media (max-width: 480px) {
+		:root {
+			--sidebar-width: 8rem; /* Largura da sidebar para telas ainda menores */
+		}
+	}
 }
 
 .hover-underline-animation {
@@ -108,7 +120,7 @@ body {
 }
 
 .default-page-div {
-	@apply flex flex-col h-full pt-sidebar2 pb-sidebar4 pl-sidebar4 pr-sidebar34 gap-sidebar4;
+	@apply flex flex-col h-full sm:pt-sidebar2 pb-sidebar4 pl-sidebar4 pr-sidebar4 gap-sidebar4;
 
 	&.less-gap {
 		@apply gap-5;
@@ -116,6 +128,32 @@ body {
 
 	&.less-padding-top {
 		@apply pt-sidebar6;
+	}
+
+	&.more-padding-right {
+		@apply lg:pr-sidebar32;
+	}
+}
+
+.default-font-size {
+	&.lg {
+		@apply xl:text-lg md:text-base text-sm;
+	}
+
+	&.xl {
+		@apply xl:text-xl md:text-lg text-base;
+	}
+
+	&.xl4 {
+		@apply xl:text-4xl md:text-3xl text-2xl;
+	}
+
+	&.xl3 {
+		@apply xl:text-3xl md:text-2xl text-xl;
+	}
+
+	&.xl5 {
+		@apply xl:text-5xl md:text-4xl text-3xl;
 	}
 }
 

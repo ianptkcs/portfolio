@@ -33,10 +33,10 @@ export default function RootLayout({
 					defaultTheme="dark"
 					disableTransitionOnChange
 				>
-					<div className="fixed top-4 right-4 bg-gray-800">
+					<div className="fixed sm:top-4 bottom-4 right-4 bg-gray-800">
 						<ThemeToggle />
 					</div>
-					<main className="pl-sidebar54">
+					<main className="sm:pl-sidebar54 flex flex-col sm:flex-row gap-5">
 						<Sidebar />
 						{children}
 					</main>

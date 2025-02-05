@@ -71,6 +71,7 @@ export default {
 			},
 			height: {
 				sidebar: 'var(--sidebar-height)',
+				sidebar4: 'calc(var(--sidebar-height) / 4)',
 				sidebar8: 'calc(var(--sidebar-height) / 8)',
 			},
 			inset: {

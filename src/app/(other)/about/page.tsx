@@ -95,8 +95,8 @@ function ToughtCard({
 }) {
 	return (
 		<div
-			className={`flex gap-4 items-center default-border all p-4 text-xl text-text-primary text-justify ${
-				right && 'translate-x-20'
+			className={`flex sm:flex-row flex-col gap-4 items-center default-border all p-4 default-font-size xl text-text-primary text-justify ${
+				right ? 'sm:translate-x-5' : 'sm:-translate-x-5'
 			}`}
 		>
 			<Icon size={48} className="flex-shrink-0" />

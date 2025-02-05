@@ -1,17 +1,12 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter, Roboto_Mono } from 'next/font/google';
 import './globals.css';
-import Sidebar from '@/components/Sidebar';
 import { ThemeProvider } from '@/contexts/ThemeProvider';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import Navbar from '@/components/Navbar';
 
 const inter = Inter({
 	variable: '--font-inter',
-	subsets: ['latin'],
-});
-
-const robotoMono = Roboto_Mono({
-	variable: '--font-roboto-mono',
 	subsets: ['latin'],
 });
 
@@ -30,14 +25,15 @@ export default function RootLayout({
 			<body className={`${inter.variable} antialiased`}>
 				<ThemeProvider
 					attribute="class"
-					defaultTheme="dark"
+					defaultTheme="system"
+					enableSystem
 					disableTransitionOnChange
 				>
-					<div className="fixed sm:top-4 bottom-4 right-4 bg-gray-800">
-						<ThemeToggle />
-					</div>
 					<main className="sm:pl-sidebar54 flex flex-col sm:flex-row gap-5">
-						<Sidebar />
+						<div className="fixed sm:top-6 bottom-6 right-6">
+							<ThemeToggle />
+						</div>
+						<Navbar />
 						{children}
 					</main>
 				</ThemeProvider>

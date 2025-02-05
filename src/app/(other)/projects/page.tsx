@@ -15,7 +15,7 @@ export default function ProjectsPage() {
 				<DefaultCard item={projects} key={projects.institution}>
 					<Link
 						href={projects.link}
-						className="text-text-strong italic opacity-80 hover:underline hover:opacity-100 hover:font-semibold transition-all w-fit py-1"
+						className="default-font-size base text-text-strong italic lg:opacity-80 hover:underline hover:opacity-100 hover:font-semibold transition-all w-fit py-1"
 						target="_blank"
 						rel="noopener noreferrer"
 					>

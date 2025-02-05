@@ -40,9 +40,9 @@ function ConnectedItem({
 						: index === len - 1
 						? 'h-1/2 self-start'
 						: 'h-full'
-				} bg-text-primary absolute left-[19px] shadow-sm shadow-text-primary opacity-50`}
+				} bg-text-primary absolute left-[19px] shadow-sm shadow-text-primary opacity-50 sm:flex hidden`}
 			></div>{' '}
-			<div className="p-2 bg-background w-fit h-fit z-10">
+			<div className="p-2 bg-background w-fit h-fit z-10 sm:flex hidden">
 				<div className="w-6 h-6 default-border all"></div>
 			</div>
 			<div className={`${index === 0 ? 'mb-2' : 'my-2'}`}>

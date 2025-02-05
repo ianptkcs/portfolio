@@ -20,7 +20,7 @@ export default function OtherLayout({
 
 	return (
 		<div className="default-page-div less-padding-top less-gap">
-			<p className="text-3xl text-text-primary font-bold">
+			<p className="default-font-size xl2 text-text-primary font-bold">
 				{titles[pathname]}:
 			</p>
 			{children}

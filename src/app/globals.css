@@ -8,7 +8,7 @@ body {
 
 @layer base {
 	:root {
-		--sidebar-width: 16rem;
+		--sidebar-width: 14rem;
 		--background: 42, 45%, 90%;
 		--foreground: 35 27% 60%;
 		--background-sidebar: 35 27% 60%;
@@ -120,7 +120,7 @@ body {
 }
 
 .default-page-div {
-	@apply flex flex-col h-full sm:pt-sidebar2 pb-sidebar4 pl-sidebar4 pr-sidebar4 gap-sidebar4;
+	@apply flex flex-col h-full sm:pt-sidebar2 pb-sidebar4 pl-sidebar4 pr-sidebar4 sm:gap-sidebar4 gap-sidebar8;
 
 	&.less-gap {
 		@apply gap-5;
@@ -136,24 +136,24 @@ body {
 }
 
 .default-font-size {
+	&.base {
+		@apply xl:text-base md:text-sm text-xs;
+	}
+
 	&.lg {
 		@apply xl:text-lg md:text-base text-sm;
 	}
 
-	&.xl {
-		@apply xl:text-xl md:text-lg text-base;
-	}
-
-	&.xl4 {
-		@apply xl:text-4xl md:text-3xl text-2xl;
+	&.xl2 {
+		@apply xl:text-2xl md:text-xl text-lg;
 	}
 
 	&.xl3 {
 		@apply xl:text-3xl md:text-2xl text-xl;
 	}
 
-	&.xl5 {
-		@apply xl:text-5xl md:text-4xl text-3xl;
+	&.xl4 {
+		@apply xl:text-4xl md:text-3xl text-2xl;
 	}
 }
 

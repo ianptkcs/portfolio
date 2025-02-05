@@ -55,11 +55,11 @@ export default function HomePage() {
 	return (
 		<>
 			<div className="default-page-div more-padding-right">
-				<div className="flex flex-col gap-4">
-					<h1 className="default-font-size xl5 font-bold text-text-strong">
+				<div className="flex flex-col sm:gap-4 gap-2">
+					<h1 className="default-font-size xl4 font-bold text-text-strong">
 						Hello!
 					</h1>
-					<p className="default-font-size xl4 text-text-primary w-10/12 leading-snug">
+					<p className="default-font-size xl3 text-text-primary w-10/12 leading-snug">
 						I'm Ian Soares, a <b>self taught</b>{' '}
 						<b className="text-text-strong">Fullstack Developer</b>{' '}
 						and a{' '}
@@ -67,10 +67,10 @@ export default function HomePage() {
 					</p>
 				</div>
 				<div className="flex flex-col gap-2">
-					<p className="default-font-size lg font-bold text-text-primary">
+					<p className="default-font-size base font-bold text-text-primary">
 						Contact me:
 					</p>
-					<ul className="flex flex-wrap gap-5">
+					<ul className="flex flex-wrap sm:gap-5 gap-3">
 						{Contacts.map((contact) => {
 							return (
 								<ContactItem
@@ -82,7 +82,7 @@ export default function HomePage() {
 					</ul>
 				</div>
 				<div className="flex flex-col gap-2">
-					<p className="default-font-size lg font-bold text-text-primary">
+					<p className="default-font-size base font-bold text-text-primary">
 						Download CV:
 					</p>
 					<div className="w-fit">
@@ -132,7 +132,7 @@ function ContactItem({
 
 	return (
 		<li
-			className="flex items-center gap-5"
+			className="flex items-center sm:gap-5 gap-3"
 			{...rest}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
@@ -152,7 +152,7 @@ function ContactItem({
 					} transition-all duration-300 ease-in-out`}
 				/>
 				<p
-					className={`default-font-size lg font-semibold text-text-primary ${
+					className={`default-font-size base font-semibold text-text-primary ${
 						isHovered && 'text-white'
 					} transition-all duration-300 ease-in-out`}
 				>

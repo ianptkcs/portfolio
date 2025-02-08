@@ -1,0 +1,149 @@
+%-------------------------%
+% Rover Resume - Fancy Template %
+% Link: https://github.com/subidit/rover-resume %
+%------------------------ %
+
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{inter} % https://tug.org/FontCatalogue/ %
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage{geometry}
+\geometry{
+a4paper,
+top=1.8cm,
+bottom=1in,
+left=2.5cm,
+right=2.5cm
+}
+
+\setcounter{secnumdepth}{0} % remove section numbering %
+
+% \usepackage[dvipsnames, svgnames, x11names]{xcolor} %
+\usepackage[dvipsnames]{xcolor} % xcolor.pdf Sec.4 Colors by Name %
+\colorlet{icnclr}{gray}
+% \colorlet [⟨type⟩]{⟨name⟩}[⟨num model⟩]{⟨color ⟩} %
+% \definecolor[⟨type⟩]{⟨name⟩}{⟨model-list⟩}{⟨spec-list⟩} %
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    noitemsep,
+    left=0pt..1.5em
+}
+\setlist[description]{itemsep=0pt}
+\setlist[enumerate]{align=left}
+
+\usepackage{titlesec}
+% \titlespacing{command}{left spacing}{before spacing}{after spacing}[right] %
+% \titlespacing{\section}{0pt}{*3}{*1} %
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+% \titleformat{<command>}[<shape>]{<format>}{<label>}{<sec>}{<before-code>}[<after-code>]  %
+\titleformat{\section}{\color{Sepia}\large\fontseries{black}\selectfont\uppercase}{}{}{\ruleafter}[\global\RemVStrue]
+\titleformat{\subsection}{\large\bfseries}{}{0pt}{}
+\titleformat{\subsubsection}{\large\itshape}{}{0pt}{}
+
+\usepackage{xhfill} 
+{% raw %}
+\newcommand\ruleafter[1]{#1~\xrfill[.5ex]{1pt}[gray]} % add rule after title in .5 x-height %
+{% endraw %}
+
+\newif\ifRemVS % remove vspace between \section & \subsection %
+\newcommand{\rvs}{
+    \ifRemVS
+        \vspace{-1.5ex}
+    \fi
+    \global\RemVSfalse
+}
+
+\usepackage[bookmarks=false]{hyperref} % [imp!] %
+\hypersetup{ % https://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+    colorlinks=true,
+    urlcolor=Sepia,
+    pdftitle={Ian Soares - CV},
+}
+
+\usepackage[page]{totalcount}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}	
+\fancyhf{}							
+\cfoot{\color{darkgray} Ian Soares - CV -- Page \thepage{} of \totalpages}
+
+
+\begin{document}
+
+%== HEADER ==%
+\begin{center}
+    {\fontsize{36}{36}\selectfont\interthin Ian\interheavy Soares} \\[1em]
+    {%- for item in contacts -%}
+    {\color{icnclr}\faIcon{ {{- item.icon|lower|replace(" ", "") -}} }} \href{ {{- item.url -}} }{ {{- item.text -}} }{%- if not loop.last %}\,|\,{%- endif %}
+    {%- endfor %}
+\end{center}
+
+\section{Education}
+%==============%
+{% for edu in education %}
+\subsection{ {{ edu.institution }} \hfill {% if edu.date.start %} {{ edu.date.start }} {% if edu.date.end %} -- {{ edu.date.end }} {% else %} -- Present {% endif %} {% else %} {% if edu.date.end %} {{ edu.date.end }} {% endif %} {% endif %} }
+\subsubsection{ {{ edu.title }} \hfill {{ edu.location }} }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    {% if edu.skills %}
+    \item \textbf{Skills:}  {{ edu.skills|join(', ') }}
+    {% endif %}
+    {% if edu.certificate %}
+    \item \textbf{Certificate:} \href{ {{ edu.certificate.src }} }{ {{ edu.certificate.type }} }
+    {% endif %}
+\end{itemize}
+{% endfor %}
+
+\section{Programming Experience}
+%===================%
+{% for pro in programming %}
+\subsection{ {{ pro.institution }} \hfill {% if pro.date.start %} {{ pro.date.start }} {% if pro.date.end %} -- {{ pro.date.end }} {% else %} -- Present {% endif %} {% else %} {% if pro.date.end %} {{ pro.date.end }} {% endif %} {% endif %} }
+\subsubsection{ {{ pro.title }} \hfill {{ pro.location }} }
+\vspace{10pt} % Ajuste o valor conforme necessário %
+\begin{itemize}
+    \item {{ pro.description }}
+    {% if pro.skills %}
+    \item \textbf{Skills:}  {{ pro.skills|join(', ') }}
+    {% endif %}
+\end{itemize}
+{% endfor %}
+
+\section{Tutoring Experience}
+%===================%
+{% for tut in tutoring %}
+\subsection{ {{ tut.institution }} \hfill {% if tut.date.start %} {{ tut.date.start }} {% if tut.date.end %} -- {{ tut.date.end }} {% else %} -- Present {% endif %} {% else %} {% if tut.date.end %} {{ tut.date.end }} {% endif %} {% endif %} }
+\subsubsection{ {{ tut.title }} \hfill {{ tut.location }} }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item {{ tut.description }}
+    {% if tut.skills %}
+    \item \textbf{Skills:}  {{ tut.skills|join(', ') }}
+    {% endif %}
+\end{itemize}
+{% endfor %}
+
+\section{Projects}
+%=================%
+{% for project in projects %}
+\subsection{ {{ project.title }} {\normalfont $|$ \href{ {{ project.link }} }{Link}} \hfill {{ project.date.end }} }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item {{ project.description }}
+    \item \textbf{Tech used:} {{ project.skills|join(', ') }}
+\end{itemize}
+{% endfor %}
+
+\section{Skills}
+%===============%
+\begin{description}
+    {% for category, items in skills.items() %}
+    \item[{{ category }}] {{ items|join(', ') }}
+    {% endfor %}
+\end{description}
+
+\end{document}

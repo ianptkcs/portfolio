@@ -10,40 +10,21 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import ContactsJSON from '@/data/Contacts.json';
+import { ContactItemInterface } from '@/interfaces/Contacts';
 
-interface ContactItemInterface {
-	icon: React.ElementType;
-	text: string;
-	url: string;
-}
+const iconMap: { [key: string]: React.ElementType } = {
+	Github,
+	Linkedin,
+	Mail,
+	Instagram,
+	Phone,
+};
 
-const Contacts: ContactItemInterface[] = [
-	{
-		icon: Github,
-		text: 'GitHub',
-		url: 'https://github.com/ianptkcs',
-	},
-	{
-		icon: Linkedin,
-		text: 'LinkedIn',
-		url: 'https://www.linkedin.com/in/ianptkcs/',
-	},
-	{
-		icon: Phone,
-		text: 'Phone',
-		url: 'https://wa.me/5531998490641',
-	},
-	{
-		icon: Mail,
-		text: 'Email',
-		url: 'mailto:ianptkcs@gmail.com',
-	},
-	{
-		icon: Instagram,
-		text: 'Instagram',
-		url: 'https://www.instagram.com/ianptkcs/',
-	},
-];
+const Contacts: ContactItemInterface[] = ContactsJSON.map((contact) => ({
+	...contact,
+	icon: iconMap[contact.icon] || FileText,
+}));
 
 const CV: ContactItemInterface = {
 	icon: FileText,

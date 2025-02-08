@@ -18,14 +18,15 @@
 			"HTML",
 			"CSS",
 			"Express",
-			"Git and GitHub",
+			"Git",
+			"GitHub",
 			"Programming Logic",
 			"TypeScript"
 		]
 	},
 	{
 		"institution": "Technological Institute of Aeronautics (ITA)",
-		"title": "Bachelor of Science in Computer Engineering",
+		"title": "BSc in Computer Engineering (INCOMPLETE)",
 		"date": {
 			"start": "Mar 2024",
 			"end": "Dec 2024"
@@ -42,13 +43,13 @@
 	},
 	{
 		"institution": "Newton Paiva",
-		"title": "Bachelor of Science in Computer and Information Systems",
+		"title": "BSc in Computer and Information Systems",
 		"date": {
 			"start": "Feb 2025",
 			"end": "Dec 2028"
 		},
 		"location": "Belo Horizonte, MG",
 		"src": "newton.png",
-		"skills": []
+		"skills": ["Software Engineering", "Algorithms"]
 	}
 ]

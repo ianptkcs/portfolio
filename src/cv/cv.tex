@@ -1,0 +1,246 @@
+%-------------------------%
+% Rover Resume - Fancy Template %
+% Link: https://github.com/subidit/rover-resume %
+%------------------------ %
+
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{inter} % https://tug.org/FontCatalogue/ %
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage{geometry}
+\geometry{
+a4paper,
+top=1.8cm,
+bottom=1in,
+left=2.5cm,
+right=2.5cm
+}
+
+\setcounter{secnumdepth}{0} % remove section numbering %
+
+% \usepackage[dvipsnames, svgnames, x11names]{xcolor} %
+\usepackage[dvipsnames]{xcolor} % xcolor.pdf Sec.4 Colors by Name %
+\colorlet{icnclr}{gray}
+% \colorlet [⟨type⟩]{⟨name⟩}[⟨num model⟩]{⟨color ⟩} %
+% \definecolor[⟨type⟩]{⟨name⟩}{⟨model-list⟩}{⟨spec-list⟩} %
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    noitemsep,
+    left=0pt..1.5em
+}
+\setlist[description]{itemsep=0pt}
+\setlist[enumerate]{align=left}
+
+\usepackage{titlesec}
+% \titlespacing{command}{left spacing}{before spacing}{after spacing}[right] %
+% \titlespacing{\section}{0pt}{*3}{*1} %
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+% \titleformat{<command>}[<shape>]{<format>}{<label>}{<sec>}{<before-code>}[<after-code>]  %
+\titleformat{\section}{\color{Sepia}\large\fontseries{black}\selectfont\uppercase}{}{}{\ruleafter}[\global\RemVStrue]
+\titleformat{\subsection}{\large\bfseries}{}{0pt}{}
+\titleformat{\subsubsection}{\large\itshape}{}{0pt}{}
+
+\usepackage{xhfill} 
+
+\newcommand\ruleafter[1]{#1~\xrfill[.5ex]{1pt}[gray]} % add rule after title in .5 x-height %
+
+
+\newif\ifRemVS % remove vspace between \section & \subsection %
+\newcommand{\rvs}{
+    \ifRemVS
+        \vspace{-1.5ex}
+    \fi
+    \global\RemVSfalse
+}
+
+\usepackage[bookmarks=false]{hyperref} % [imp!] %
+\hypersetup{ % https://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+    colorlinks=true,
+    urlcolor=Sepia,
+    pdftitle={Ian Soares - CV},
+}
+
+\usepackage[page]{totalcount}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}	
+\fancyhf{}							
+\cfoot{\color{darkgray} Ian Soares - CV -- Page \thepage{} of \totalpages}
+
+
+\begin{document}
+
+%== HEADER ==%
+\begin{center}
+    {\fontsize{36}{36}\selectfont\interthin Ian\interheavy Soares} \\[1em]{\color{icnclr}\faIcon{github}} \href{https://github.com/ianptkcs}{GitHub}\,|\,{\color{icnclr}\faIcon{linkedin}} \href{https://www.linkedin.com/in/ianptkcs/}{LinkedIn}\,|\,{\color{icnclr}\faIcon{phone}} \href{https://wa.me/5531998490641}{Phone}\,|\,{\color{icnclr}\faIcon{envelope}} \href{mailto:ianptkcs@gmail.com}{Email}\,|\,{\color{icnclr}\faIcon{instagram}} \href{https://www.instagram.com/ianptkcs/}{Instagram}
+\end{center}
+
+\section{Education}
+%==============%
+
+\subsection{ Newton Paiva \hfill  Feb 2025  -- Dec 2028   }
+\subsubsection{ BSc in Computer and Information Systems \hfill Belo Horizonte, MG }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    
+    \item \textbf{Skills:}  Software Engineering, Algorithms
+    
+    
+\end{itemize}
+
+\subsection{ Alura \hfill  Apr 2024  -- Present   }
+\subsubsection{ Fullstack Development \hfill Online }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    
+    \item \textbf{Skills:}  JavaScript, React, Node.js, HTML, CSS, Express, Git, GitHub, Programming Logic, TypeScript
+    
+    
+    \item \textbf{Certificate:} \href{ https://cursos.alura.com.br/user/ianptkcs/fullCertificate/1045d336cd07a99c9b48634105c74835 }{ Link }
+    
+\end{itemize}
+
+\subsection{ Technological Institute of Aeronautics (ITA) \hfill  Mar 2024  -- Dec 2024   }
+\subsubsection{ BSc in Computer Engineering (INCOMPLETE) \hfill São José dos Campos, SP }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    
+    \item \textbf{Skills:}  Calculus, Analytical Geometry, Physics, C/C++, Linear Algebra
+    
+    
+\end{itemize}
+
+
+\section{Programming Experience}
+%===================%
+
+\subsection{ Ensino Ágil \hfill  Jan 2025  -- Present   }
+\subsubsection{ Fullstack Developer \hfill Online }
+\vspace{10pt} % Ajuste o valor conforme necessário %
+\begin{itemize}
+    \item As a full-stack developer, I have been contributing to the development of a white-label educational platform, working with Django for the backend and Angular for the frontend. My role involves building scalable solutions, ensuring seamless integration, and enhancing the platform's usability to meet the needs of educators and learners.
+    
+    \item \textbf{Skills:}  Angular, TypeScript, Django, Python, ClickUp, PostgreSQL, White Label, Git, GitHub
+    
+\end{itemize}
+
+\subsection{ Technological Institute of Aeronautics (ITA) \hfill  Mar 2024  -- Dec 2024   }
+\subsubsection{ Student Clubs \hfill São José dos Campos, SP }
+\vspace{10pt} % Ajuste o valor conforme necessário %
+\begin{itemize}
+    \item I have been an active member of the ITA community, participating in various student clubs and extracurricular activities. I have been involved in the ITABits, the ITA Blockchain Club, and the eVTOL ITA, where I have had the opportunity to develop my skills and knowledge in these areas.
+    
+    \item \textbf{Skills:}  Problem-solving, Teamwork, Blockchain, Machine Learning
+    
+\end{itemize}
+
+
+\section{Tutoring Experience}
+%===================%
+
+\subsection{ Colégio Bernoulli \hfill  Feb 2025  -- Present   }
+\subsubsection{ Physics Tutor \hfill Belo Horizonte, MG }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item With experience in the ITA exam, I am committed to helping students clear their doubts and guiding them through the challenges of this rigorous test. By sharing my knowledge and strategies, I aim to empower students to achieve their academic goals and succeed in their journey toward entering one of Brazil's most prestigious institutions.
+    
+    \item \textbf{Skills:}  Physics, Pedagogy, Communication, Organization, Teamwork, Problem-solving
+    
+\end{itemize}
+
+\subsection{ Projeto GRADUA NÓIZ \hfill  Jun 2024  -- Present   }
+\subsubsection{ Physics Teacher \hfill Online }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item Lecturing for underprivileged individuals aspiring to enter university, I am dedicated to providing opportunities for those who face socioeconomic challenges. By contributing to the Nóiz Projeto Social, I actively support community education initiatives, helping to bridge gaps and create pathways for personal and academic growth.
+    
+    \item \textbf{Skills:}  Physics, Pedagogy, Communication, Organization, Teamwork
+    
+\end{itemize}
+
+\subsection{ Self-employed \hfill  Mar 2024  -- Present   }
+\subsubsection{ Private Teacher \hfill Online }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item I have been teaching Mathematics, Physics, and Chemistry to secondary education students since 2024, helping them to understand the subjects and improve their grades.
+    
+    \item \textbf{Skills:}  Mathematics, Physics, Chemistry, Pedagogy, Communication, Organization
+    
+\end{itemize}
+
+\subsection{ Curso Alberto Santos Dumont (CASD) \hfill  Mar 2024  -- Present   }
+\subsubsection{ Math Teacher \hfill São José dos Campos, SP }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item Lecturing for over 200 students in the nationally recognized best beneficent course in Brazil, I am passionate about making a meaningful impact and look forward to changing the lives of 14- to 15-year-old low-income individuals. Through producing custom, original, and engaging educational material, I aim to inspire and empower students to reach their full potential.
+    
+    \item \textbf{Skills:}  Mathematics, Pedagogy, Communication, Organization, Teamwork
+    
+\end{itemize}
+
+
+\section{Projects}
+%=================%
+
+\subsection{ Let's Dice {\normalfont $|$ \href{ https://letsdice.vercel.app/ }{Link}} \hfill  }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item A social media platform for tabletop RPG players to connect, find gaming tables, and organize sessions, creating a community for RPG enthusiasts.
+    \item \textbf{Tech used:} React, Next.js, TypeScript, Prisma, PostgreSQL, Docker, Tailwind CSS
+\end{itemize}
+
+\subsection{ First Portfolio {\normalfont $|$ \href{ https://portfolio-sooty-kappa-79.vercel.app/ }{Link}} \hfill Dec 2024 }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item My first portfolio site, visually inspired by RPGs, programming and gaming.
+    \item \textbf{Tech used:} Next.js, TypeScript, Tailwind CSS
+\end{itemize}
+
+\subsection{ OnePiece Wallpapers {\normalfont $|$ \href{ https://onepiecewallpapers.vercel.app/ }{Link}} \hfill Jul 2024 }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item Created a fictional site for One Piece wallpapers.
+    \item \textbf{Tech used:} React, Vite, Styled Components, JavaScript
+\end{itemize}
+
+\subsection{ OnePiece+ Marketing {\normalfont $|$ \href{ https://onepieceplus.vercel.app/ }{Link}} \hfill Jun 2024 }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item Created a promotional site for a fictional application called OnePiece+.
+    \item \textbf{Tech used:} HTML, CSS
+\end{itemize}
+
+\subsection{ OnePiece+ {\normalfont $|$ \href{ https://onepieceplus-design-1.vercel.app/ }{Link}} \hfill Jun 2024 }
+\vspace{10pt} % Ajuste o valor conforme necessário
+\begin{itemize}
+    \item Developed a mobile-first design for an application called OnePiece+.
+    \item \textbf{Tech used:} HTML, CSS
+\end{itemize}
+
+
+\section{Skills}
+%===============%
+\begin{description}
+    
+    \item[Frontend] Angular, React, Styled Components, Next.js, Tailwind CSS, CSS, JavaScript, TypeScript, HTML
+    
+    \item[Backend] Express, Django, Python, PostgreSQL, Prisma, Node.js
+    
+    \item[Tools] Docker, Git, Vite, GitHub, ClickUp
+    
+    \item[Fundamentals] Linear Algebra, Blockchain, Software Engineering, Algorithms, Programming Logic, Analytical Geometry, Machine Learning, C/C++, Physics, Calculus, Problem-solving
+    
+    \item[Soft Skills] Teamwork, Communication
+    
+    \item[Tutoring] Mathematics, Chemistry, Pedagogy, Organization
+    
+    \item[Others] White Label
+    
+\end{description}
+
+\end{document}

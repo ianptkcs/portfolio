@@ -1,0 +1,44 @@
+{
+	"Frontend": [
+		"HTML",
+		"CSS",
+		"JavaScript",
+		"TypeScript",
+		"React",
+		"Styled Components",
+		"Tailwind CSS",
+		"Next.js",
+		"Angular"
+	],
+	"Backend": [
+		"Node.js",
+		"Express",
+		"Python",
+		"Django",
+		"PostgreSQL",
+		"Prisma"
+	],
+	"Tools": ["Git", "GitHub", "Docker", "ClickUp", "Vite"],
+	"Fundamentals": [
+		"Programming Logic",
+		"C/C++",
+		"Python",
+		"Calculus",
+		"Linear Algebra",
+		"Physics",
+		"Analytical Geometry",
+		"Problem-solving",
+		"Machine Learning",
+		"Blockchain",
+		"Software Engineering",
+		"Algorithms"
+	],
+	"Soft Skills": ["Teamwork", "Communication"],
+	"Tutoring": [
+		"Mathematics",
+		"Physics",
+		"Chemistry",
+		"Pedagogy",
+		"Organization"
+	]
+}

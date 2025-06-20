@@ -1,0 +1,21 @@
+[
+	{
+		"title": "Fullstack Developer",
+		"institution": "Ensino Ágil",
+		"src": "ea.png",
+		"date": {
+			"start": "01/2025"
+		},
+		"location": "Remote",
+		"description": "As a full-stack developer, I have been contributing to the development of a white-label educational platform, working with Django for the backend and Angular for the frontend. My role involves building scalable solutions, ensuring seamless integration, and enhancing the platform's usability to meet the needs of educators and learners.",
+		"skills": [
+			"Angular",
+			"TypeScript",
+			"Django",
+			"Python",
+			"PostgreSQL",
+			"Git",
+			"GitHub"
+		]
+	}
+]

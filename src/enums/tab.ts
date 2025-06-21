@@ -1,4 +1,5 @@
 import { Option } from "~/interfaces/option";
+import { Icon } from "./icons";
 
 export enum Tab {
   home = "",
@@ -8,12 +9,12 @@ export enum Tab {
   projects = "projects",
 };
 
-export const kTabIcon: Record<Tab, string> = {
-  [Tab.home]: "tabler:home",
-  [Tab.programming]: "tabler:code",
-  [Tab.tutoring]: "tabler:chalkboard",
-  [Tab.education]: "tabler:school",
-  [Tab.projects]: "tabler:folder",
+export const kTabIcon: Record<Tab, Icon> = {
+  [Tab.home]: Icon.home,
+  [Tab.programming]: Icon.code,
+  [Tab.tutoring]: Icon.chalkboard,
+  [Tab.education]: Icon.gradCap,
+  [Tab.projects]: Icon.folder,
 };
 
 export const kTabLabel: Record<Tab, string> = Object.entries(Tab).reduce(

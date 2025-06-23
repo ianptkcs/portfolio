@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { drizzle } from 'drizzle-orm/bun-sqlite';
+import { drizzle } from 'drizzle-orm/libsql';
 import { contactsTable, experiencesTable } from './db/schema';
 import { contacts } from './db/data/contacts';
 import { experiences } from './db/data/experiences';

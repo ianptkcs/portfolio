@@ -138,7 +138,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    type: ExperienceType.edu,
+    type: ExperienceType.proj,
     institution: "Personal Project",
     title: "Responsive Portfolio",
     start: "06/2025",

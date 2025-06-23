@@ -1,20 +1,22 @@
 import { A, createAsync, query, RouteDefinition } from "@solidjs/router";
-import { db } from "..";
 import { kSocialIcon, kSocialLabel } from "~/enums/social";
-import { contactsTable } from "~/db/schema";
 import { Icon } from "~/enums/icons";
-import QueryList from "~/components/QueryList";
+import { ErrorBoundary, For, Suspense } from "solid-js";
+import { getAllContacts } from "~/utils/contact";
 
 const getAllSocials = query(async () => {
   "use server";
-  return await db.select().from(contactsTable);
+  return await getAllContacts();
 }, "contacts");
 
 export const route = {
-  preload: () => getAllSocials(),
+  preload: () => {
+    console.log('oi home')
+    return getAllSocials();
+  },
 } satisfies RouteDefinition;
 
-export default function Home() {
+export default function Index() {
   const contacts = createAsync(() => getAllSocials());
 
   return (
@@ -34,39 +36,52 @@ export default function Home() {
           <div class="flex flex-col gap-2 lg:gap-4">
             <span class="text-base lg:text-xl font-bold">Let's talk:</span>
             <ul class="flex flex-wrap gap-2 lg:gap-4">
-              <QueryList
-                data={contacts}
-                fallbackLength={5}
-                skeleton={<div class="skeleton h-16"></div>}
+              <Suspense
+                fallback={
+                  <For each={Array.from({ length: 5 })}>
+                    {() => <div class="skeleton h-16"></div>}
+                  </For>
+                }
               >
-                {(item) => (
-                  <li>
-                    <A
-                      role="button"
-                      class="btn btn-soft btn-md lg:btn-lg xl:btn-xl"
-                      href={item.url}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="2.5"
-                        stroke="currentColor"
-                        class="size-4 md:size-6 xl:size-8"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d={kSocialIcon[item.name]}
-                        />
-                      </svg>
-                      {kSocialLabel[item.name]}
-                    </A>
-                  </li>
-                )}
-              </QueryList>
+                <ErrorBoundary
+                  fallback={(error, reset) => (
+                    <div>
+                      <span>{error.message}</span>
+                      <button onClick={reset}>Try Again</button>
+                    </div>
+                  )}
+                >
+                  <For each={contacts()}>
+                    {(item) => (
+                      <li>
+                        <A
+                          role="button"
+                          class="btn btn-soft btn-md lg:btn-lg xl:btn-xl"
+                          href={item.url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2.5"
+                            stroke="currentColor"
+                            class="size-4 md:size-6 xl:size-8"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d={kSocialIcon[item.name]}
+                            />
+                          </svg>
+                          {kSocialLabel[item.name]}
+                        </A>
+                      </li>
+                    )}
+                  </For>
+                </ErrorBoundary>
+              </Suspense>
             </ul>
           </div>
           <div class="flex flex-col gap-4 max-w-60">

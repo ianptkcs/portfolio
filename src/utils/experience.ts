@@ -1,5 +1,3 @@
-"use server";
-
 import { db } from "..";
 import { experiencesTable } from "~/db/schema";
 import { ExperienceType } from "~/enums/experience-type";

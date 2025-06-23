@@ -1,5 +1,3 @@
-"use server";
-
 import { contactsTable } from "~/db/schema";
 import { db } from "../index";
 import { query } from "@solidjs/router";

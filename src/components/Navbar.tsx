@@ -1,4 +1,4 @@
-import { useMatch, useNavigate } from "@solidjs/router";
+import { A, useMatch, useNavigate } from "@solidjs/router";
 import { For } from "solid-js";
 import { Icon } from "~/enums/icons";
 import { kTabIcon, Tab, tabOptions } from "~/enums/tab";
@@ -32,15 +32,15 @@ export default function Navbar() {
             <For each={tabOptions}>
               {(item) => (
                 <li>
-                  <a href={item.value}>{item.label.toLocaleUpperCase()}</a>
+                  <A href={item.value}>{item.label.toLocaleUpperCase()}</A>
                 </li>
               )}
             </For>
           </ul>
         </div>
-        <a href="/" class="btn btn-ghost uppercase text-xl">
+        <A href="/" class="btn btn-ghost uppercase text-xl">
           Ian Soares
-        </a>
+        </A>
       </div>
       <div class="navbar-center hidden xl:flex">
         <ul class="menu menu-horizontal px-1">
@@ -97,13 +97,13 @@ function TabInput({ item }: { item: Option<Tab> }) {
   const navigate = useNavigate();
 
   return (
-    <input
-      type="radio"
-      id={item.label}
-      name={item.label}
-      aria-label={item.label}
-      checked={Boolean(match())}
-      onClick={() => navigate(`/${item.value}`)}
-    />
+      <input
+        type="radio"
+        id={item.label}
+        name={item.label}
+        aria-label={item.label}
+        checked={Boolean(match())}
+        onClick={() => navigate(`/${item.value}`)}
+      />
   );
 }

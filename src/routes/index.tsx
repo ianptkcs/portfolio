@@ -1,9 +1,9 @@
 import { A, createAsync, query, RouteDefinition } from "@solidjs/router";
-import { ErrorBoundary, For, Suspense } from "solid-js";
 import { db } from "..";
 import { kSocialIcon, kSocialLabel } from "~/enums/social";
 import { contactsTable } from "~/db/schema";
 import { Icon } from "~/enums/icons";
+import QueryList from "~/components/QueryList";
 
 const getAllSocials = query(async () => {
   "use server";
@@ -34,52 +34,39 @@ export default function Home() {
           <div class="flex flex-col gap-2 lg:gap-4">
             <span class="text-base lg:text-xl font-bold">Let's talk:</span>
             <ul class="flex flex-wrap gap-2 lg:gap-4">
-              <Suspense
-                fallback={
-                  <For each={Array.from({ length: 5 })}>
-                    {() => <div class="skeleton h-32"></div>}
-                  </For>
-                }
+              <QueryList
+                data={contacts}
+                fallbackLength={5}
+                skeleton={<div class="skeleton h-16"></div>}
               >
-                <ErrorBoundary
-                  fallback={(error, reset) => (
-                    <div>
-                      <span>{error.message}</span>
-                      <button onClick={reset}>Try Again</button>
-                    </div>
-                  )}
-                >
-                  <For each={contacts()}>
-                    {(item) => (
-                      <li>
-                        <A
-                          role="button"
-                          class="btn btn-soft btn-md lg:btn-lg xl:btn-xl"
-                          href={item.url}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="2.5"
-                            stroke="currentColor"
-                            class="size-4 md:size-6 xl:size-8"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d={kSocialIcon[item.name]}
-                            />
-                          </svg>
-                          {kSocialLabel[item.name]}
-                        </A>
-                      </li>
-                    )}
-                  </For>
-                </ErrorBoundary>
-              </Suspense>
+                {(item) => (
+                  <li>
+                    <A
+                      role="button"
+                      class="btn btn-soft btn-md lg:btn-lg xl:btn-xl"
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2.5"
+                        stroke="currentColor"
+                        class="size-4 md:size-6 xl:size-8"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d={kSocialIcon[item.name]}
+                        />
+                      </svg>
+                      {kSocialLabel[item.name]}
+                    </A>
+                  </li>
+                )}
+              </QueryList>
             </ul>
           </div>
           <div class="flex flex-col gap-4 max-w-60">
@@ -111,11 +98,11 @@ export default function Home() {
         </div>
       </div>
       <div class="card card-xl card-border bg-base-100 shadow-md max-w-[560px] h-auto w-full md:w-auto max-h-96 md:max-h-[560px] lg:max-h-[760px]">
-          <img
-            src="/preferida.jpg"
-            alt="Shoes"
-            class="size-full p-2 items-center object-cover rounded-xl"
-          />
+        <img
+          src="/preferida.jpg"
+          alt="Shoes"
+          class="size-full p-2 items-center object-cover rounded-xl"
+        />
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export enum Skill {
   html = "HTML",
   css = "CSS",
   programmingLogic = "Programming Logic",
-  cPlusPlus = "C/C++",
+  cpp = "C/C++",
   calculus = "Calculus",
   analyticalGeometry = "Analytical Geometry",
   linearAlgebra = "Linear Algebra",
@@ -29,4 +29,7 @@ export enum Skill {
   daisyUI = "DaisyUI",
   authentication = "Authentication",
   webSockets = "WebSockets",
+  solidStart = "SolidStart",
+  drizzle = "Drizzle",
+  bunSQLite = "Bun SQLite"
 }

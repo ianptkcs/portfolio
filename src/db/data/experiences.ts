@@ -7,11 +7,13 @@ export const experiences: Experience[] = [
     type: ExperienceType.dev,
     title: "Fullstack Developer",
     institution: "Ensino Ágil",
-    img: "ea",
     start: "01/2025",
     location: "Remote",
-    description:
-      "As a full-stack developer, I have been contributing to the development of a white-label educational platform, working with Django for the backend and Angular for the frontend. My role involves building scalable solutions, ensuring seamless integration, and enhancing the platform's usability to meet the needs of educators and learners.",
+    description: [
+      "Responsible for modernizing UI/UX: refactor legacy pages and design new ones.",
+      "Lead creation of checkout pages.",
+      "Currently developing modular feature architecture by separating Virtual Learning Environment and Virtual Teaching Assistant to deliver a modern experience.",
+    ],
     skills: [
       Skill.angular,
       Skill.typeScript,
@@ -26,11 +28,12 @@ export const experiences: Experience[] = [
     type: ExperienceType.tutor,
     title: "Private Teacher",
     institution: "Self-employed",
-    img: "eu-quadrado.jpg",
     start: "03/2024",
     location: "Online",
-    description:
-      "I have been teaching Mathematics, Physics, and Chemistry to secondary education students since 2024, helping them to understand the subjects and improve their grades.",
+    description: [
+      "Provide one-on-one tutoring in physics, mathematics and chemistry for secondary students since 2024.",
+      "Improve comprehension and grades through tailored explanations and practice.",
+    ],
     skills: [
       Skill.mathematics,
       Skill.physics,
@@ -44,11 +47,12 @@ export const experiences: Experience[] = [
     type: ExperienceType.tutor,
     title: "Math Teacher",
     institution: "Curso Alberto Santos Dumont (CASD)",
-    img: "casd",
     start: "03/2024",
     location: "São José dos Campos, SP",
-    description:
-      "Lecturing for over 200 students in the nationally recognized best beneficent course in Brazil, I am passionate about making a meaningful impact and look forward to changing the lives of 14- to 15-year-old low-income individuals. Through producing custom, original, and engaging educational material, I aim to inspire and empower students to reach their full potential.",
+    description: [
+      "Taught mathematics at Brazil's largest public prep course with classes of over 40 students.",
+      "Helped 263 students gain admission, including 56 to Colégio Embraer, 60 to Univap and 35 to IFSP.",
+    ],
     skills: [
       Skill.mathematics,
       Skill.pedagogy,
@@ -61,12 +65,13 @@ export const experiences: Experience[] = [
     type: ExperienceType.tutor,
     title: "Physics Teacher",
     institution: "Projeto GRADUA NÓIZ",
-    img: "noiz",
     start: "06/2024",
     end: "01/2025",
     location: "Online",
-    description:
-      "Lecturing for underprivileged individuals aspiring to enter university, I am dedicated to providing opportunities for those who face socioeconomic challenges. By contributing to the Nóiz Projeto Social, I actively support community education initiatives, helping to bridge gaps and create pathways for personal and academic growth.",
+    description: [
+      "Taught physics online for Projeto GRADUA NÓIZ (ONG NOIZ), offering free courses to students from Cidade de Deus.",
+      "Supported 7 student admissions in early 2025.",
+    ],
     skills: [
       Skill.physics,
       Skill.pedagogy,
@@ -79,11 +84,12 @@ export const experiences: Experience[] = [
     type: ExperienceType.tutor,
     title: "Physics Tutor",
     institution: "Colégio Bernoulli",
-    img: "bernoulli",
     start: "02/2025",
     location: "Belo Horizonte, MG",
-    description:
-      "With experience in the ITA exam, I am committed to helping students clear their doubts and guiding them through the challenges of this rigorous test. By sharing my knowledge and strategies, I aim to empower students to achieve their academic goals and succeed in their journey toward entering one of Brazil's most prestigious institutions.",
+    description: [
+      "Leveraged personal success in ITA 2024 exam to tutor Bernoulli students preparing for ITA.",
+      "Guided problem-solving, exam strategies and doubt resolution.",
+    ],
     skills: [
       Skill.physics,
       Skill.pedagogy,
@@ -97,11 +103,11 @@ export const experiences: Experience[] = [
     type: ExperienceType.proj,
     title: "Red Lib",
     institution: "Personal Project",
-    img: "redlib",
     start: "06/2025",
     location: "Remote",
-    description:
-      "An all-in-one library platform for those who want to keep track of its favorite shows, animes, books... all works in one place.",
+    description: [
+      "Developing an integrated library platform to track shows, anime, books and other media in one place.",
+    ],
     skills: [
       Skill.elixir,
       Skill.phoenix,
@@ -115,18 +121,32 @@ export const experiences: Experience[] = [
     type: ExperienceType.edu,
     institution: "Technological Institute of Aeronautics (ITA)",
     title: "BSc in Computer Engineering (INCOMPLETE)",
-    img: "ita",
     start: "03/2024",
     end: "12/2024",
     location: "São José dos Campos, SP",
-    description:
-      "Studied basic engineering cycle and participated in initiatives such as ITA Bits, but I felt the curriculum lacked a stronger focus on computing rather than general engineering, so I decided to leave.",
+    description: [
+      "Completed basic engineering cycle.",
+      "Participated in initiatives like CASD and ITA Bits.",
+      "Left to pursue a more computing-focused curriculum.",
+    ],
     skills: [
       Skill.calculus,
       Skill.analyticalGeometry,
       Skill.physics,
-      Skill.cPlusPlus,
+      Skill.cpp,
       Skill.linearAlgebra,
     ],
+  },
+  {
+    type: ExperienceType.edu,
+    institution: "Personal Project",
+    title: "Responsive Portfolio",
+    start: "06/2025",
+    location: "Remote",
+    description: [
+      "Developed a responsive, modern portfolio website to showcase projects and skills.",
+      "Implemented key features using DaisyUI, SolidStart, bunSQLite and Drizzle.",
+    ],
+    skills: [Skill.daisyUI, Skill.solidStart, Skill.bunSQLite, Skill.drizzle],
   },
 ];

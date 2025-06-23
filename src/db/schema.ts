@@ -16,15 +16,14 @@ export const experiencesTable = sqliteTable(DbTables.experiences, {
 
   title: text().$type<string>().notNull(),
   institution: text().notNull(),
-  img: text().notNull(),
 
   type: text().$type<ExperienceType>(),
 
-  start: text(),
+  start: text().notNull(),
   end: text(),
 
   location: text().notNull(),
-  description: text().notNull(),
+  description: text().$type<string[]>().notNull(),
 
   src: text(),
 

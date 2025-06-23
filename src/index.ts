@@ -15,6 +15,7 @@ async function seed() {
   await db.insert(experiencesTable).values(experiences.map(e => ({
     ...e,
     skills: JSON.stringify(e.skills) as unknown as Skill[],
+    description: JSON.stringify(e.description) as unknown as string[],
   })));
 }
 

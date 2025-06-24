@@ -28,11 +28,11 @@ export const TimelineSkeleton = () => {
         </svg>
       </div>
       <div class="timeline-start lg:text-end">
-        <div class="skeleton h-5"></div>
-        <div class="skeleton h-5"></div>
-        <div class="skeleton h-5"></div>
+        <div class="skeleton h-5 w-8"></div>
+        <div class="skeleton h-5 w-12"></div>
+        <div class="skeleton h-5 w-10"></div>
       </div>
-      <div class="skeleton h-16 timeline-end mb-10"></div>
+      <div class="skeleton h-16 w-48 timeline-end mb-10"></div>
     </li>
   );
 };

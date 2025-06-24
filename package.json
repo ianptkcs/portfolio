@@ -7,25 +7,20 @@
     "start": "vinxi start"
   },
   "dependencies": {
-    "@iconify-icon/solid": "^3.0.0",
-    "@libsql/client": "^0.15.9",
-    "@solid-primitives/i18n": "^2.2.1",
     "@solidjs/router": "^0.15.0",
     "@solidjs/start": "^1.1.0",
-    "better-sqlite3": "^11.10.0",
     "daisyui": "^5.0.43",
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.44.2",
     "drizzle-seed": "^0.3.1",
     "solid-js": "^1.9.5",
-    "theme-change": "^2.5.0",
     "vinxi": "^0.5.3"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.10",
+    "@types/bun": "^1.2.17",
     "drizzle-kit": "^0.31.2",
-    "tailwindcss": "^4.1.10",
-    "tsx": "^4.20.3"
+    "tailwindcss": "^4.1.10"
   },
   "engines": {
     "node": ">=22"

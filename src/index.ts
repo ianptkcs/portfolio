@@ -6,8 +6,10 @@ import { experiences } from './db/data/experiences';
 import { Skill } from './enums/skill';
 import * as schema from "./db/schema";
 import { reset } from 'drizzle-seed';
+import { createClient } from '@libsql/client';
 
-export const db = drizzle(process.env.DB_FILE_NAME!);
+const client = createClient({ url: process.env.DB_FILE_NAME! });
+export const db = drizzle({ client });
 
 async function seed() {
   await reset(db, schema);

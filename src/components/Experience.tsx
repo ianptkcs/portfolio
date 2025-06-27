@@ -27,7 +27,7 @@ export const TimelineSkeleton = () => {
           <path fill-rule="evenodd" d={Icon.check} clip-rule="evenodd" />
         </svg>
       </div>
-      <div class="timeline-start lg:text-end">
+      <div class="flex flex-col gap-4 timeline-start lg:text-end">
         <div class="skeleton h-5 w-8"></div>
         <div class="skeleton h-5 w-12"></div>
         <div class="skeleton h-5 w-10"></div>

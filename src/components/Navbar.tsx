@@ -6,7 +6,7 @@ import { Option } from "~/interfaces/option";
 
 export default function Navbar() {
   return (
-    <div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar card-border bg-base-100 border-2 rounded-lg border-base-300 shadow-md">
       <div class="navbar-start">
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost xl:hidden">

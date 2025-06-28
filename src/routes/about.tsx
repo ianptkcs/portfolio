@@ -3,7 +3,7 @@ import { Icon } from "~/enums/icons";
 
 export default function AboutPage() {
   return (
-    <main class="container mx-auto py-12 flex flex-col gap-8">
+    <main class="container mx-auto py-12 px-2 lg:px-10 flex flex-col gap-8">
       <ThoughtCard icon={Icon.bulb}>
         <>
           - I’m a creative soul who loves dreaming up new ideas. I’m passionate

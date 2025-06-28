@@ -12,8 +12,8 @@ export function ThoughtCard({
 }) {
   return (
     <div
-      class={`timeline-box text-xl p-6 flex items-center gap-4 transition-transform
-        ${right ? "md:translate-x-5" : "md:-translate-x-5"}`}
+      class={`timeline-box text-xl p-6 flex flex-col md:flex-row justify-center md:justify-start items-center gap-4 transition-transform
+        ${right ? "lg:translate-x-5" : "lg:-translate-x-5"}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

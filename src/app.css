@@ -9,7 +9,7 @@
 }
 @plugin "daisyui/theme" {
   name: "cupcake";
-  default: false;
+  default: true;
   prefersdark: false;
   color-scheme: "light";
   --color-base-100: oklch(97.788% 0.004 56.375);
@@ -40,6 +40,7 @@
   --border: 2px;
   --depth: 1;
   --noise: 0;
+  --color-border: oklch(91.586% 0.006 53.44);
 }
 @plugin "daisyui/theme" {
   name: "dracula";
@@ -74,4 +75,6 @@
   --border: 2px;
   --depth: 1;
   --noise: 0;
+  --color-border: oklch(75.461% 0.183 346.812);
 }
+@custom-variant dracula (&:where([data-theme=dracula], [data-theme=dracula] *));

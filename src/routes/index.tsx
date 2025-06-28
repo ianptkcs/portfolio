@@ -89,7 +89,7 @@ export default function Index() {
             <ul class="flex flex-wrap gap-2 lg:gap-4">
               <A
                 role="button"
-                class="btn btn-md lg:btn-lg xl:btn-xl"
+                class="btn btn-soft btn-md lg:btn-lg xl:btn-xl"
                 href="cv/cv-dev.pdf"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -112,7 +112,7 @@ export default function Index() {
               </A>
               <A
                 role="button"
-                class="btn btn-md lg:btn-lg xl:btn-xl"
+                class="btn btn-soft btn-md lg:btn-lg xl:btn-xl"
                 href="cv/cv-tutor.pdf"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -137,7 +137,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div class="card card-xl card-border bg-base-100 shadow-md max-w-[560px] h-auto w-full md:w-auto max-h-96 md:max-h-[560px] lg:max-h-[760px]">
+      <div class="card card-xl card-border border-base-300 bg-base-100 shadow-md max-w-[560px] h-auto w-full md:w-auto max-h-96 md:max-h-[560px] lg:max-h-[760px]">
         <img
           src="/preferida.jpg"
           alt="Shoes"

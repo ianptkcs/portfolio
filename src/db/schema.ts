@@ -1,4 +1,5 @@
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { CVType } from "~/enums/cv-type";
 import { DbTables } from "~/enums/db-tables";
 import { ExperienceType } from "~/enums/experience-type";
 import { Skill } from "~/enums/skill";
@@ -18,6 +19,7 @@ export const experiencesTable = sqliteTable(DbTables.experiences, {
   institution: text().notNull(),
 
   type: text().$type<ExperienceType>(),
+  cv: text().$type<CVType>(),
 
   start: text().notNull(),
   end: text(),

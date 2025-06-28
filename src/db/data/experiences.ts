@@ -1,10 +1,12 @@
 import { Skill } from "~/enums/skill";
 import { ExperienceType } from "~/enums/experience-type";
 import { Experience } from "../schema";
+import { CVType } from "~/enums/cv-type";
 
 export const experiences: Experience[] = [
   {
     type: ExperienceType.dev,
+    cv: CVType.dev,
     title: "Fullstack Developer",
     institution: "Ensino Ágil",
     start: "01/2025",
@@ -26,6 +28,7 @@ export const experiences: Experience[] = [
   },
   {
     type: ExperienceType.tutor,
+    cv: CVType.tutor,
     title: "Private Teacher",
     institution: "Self-employed",
     start: "03/2024",
@@ -45,6 +48,7 @@ export const experiences: Experience[] = [
   },
   {
     type: ExperienceType.tutor,
+    cv: CVType.tutor,
     title: "Math Teacher",
     institution: "Curso Alberto Santos Dumont (CASD)",
     start: "03/2024",
@@ -63,10 +67,10 @@ export const experiences: Experience[] = [
   },
   {
     type: ExperienceType.tutor,
+    cv: CVType.tutor,
     title: "Physics Teacher",
     institution: "Projeto GRADUA NÓIZ",
     start: "06/2024",
-    end: "01/2025",
     location: "Online",
     description: [
       "Taught physics online for Projeto GRADUA NÓIZ (ONG NOIZ), offering free courses to students from Cidade de Deus.",
@@ -82,6 +86,7 @@ export const experiences: Experience[] = [
   },
   {
     type: ExperienceType.tutor,
+    cv: CVType.tutor,
     title: "Physics Tutor",
     institution: "Colégio Bernoulli",
     start: "02/2025",
@@ -101,6 +106,7 @@ export const experiences: Experience[] = [
   },
   {
     type: ExperienceType.proj,
+    cv: CVType.dev,
     title: "Red Lib",
     institution: "Personal Project",
     start: "06/2025",
@@ -119,13 +125,14 @@ export const experiences: Experience[] = [
   },
   {
     type: ExperienceType.edu,
+    cv: CVType.both,
     institution: "Technological Institute of Aeronautics (ITA)",
     title: "BSc in Computer Engineering (INCOMPLETE)",
     start: "03/2024",
     end: "12/2024",
     location: "São José dos Campos, SP",
     description: [
-      "Completed basic engineering cycle.",
+      "Studied basic engineering cycle.",
       "Participated in initiatives like CASD and ITA Bits.",
       "Left to pursue a more computing-focused curriculum.",
     ],
@@ -139,8 +146,9 @@ export const experiences: Experience[] = [
   },
   {
     type: ExperienceType.proj,
+    cv: CVType.dev,
     institution: "Personal Project",
-    title: "Responsive Portfolio",
+    title: "Portfolio",
     start: "06/2025",
     location: "Remote",
     description: [

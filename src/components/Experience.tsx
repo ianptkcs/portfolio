@@ -62,6 +62,15 @@ export const TimelineItem = ({ exp }: { exp: Experience }) => {
         <div class="text-base italic">{exp.institution}</div>
       </div>
       <div class="timeline-end timeline-box text-lg mb-10">
+        <ul class="flex flex-wrap space-x-4 space-y-2">
+          <For each={exp.skills}>
+            {(skill) => (
+              <li>
+                <span class="badge badge-accent">{skill}</span>
+              </li>
+            )}
+          </For>
+        </ul>
         <ul class="list-disc px-4 py-2">
           <For each={exp.description}>
             {(desc) => (

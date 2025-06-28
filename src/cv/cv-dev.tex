@@ -1,0 +1,129 @@
+%-------------------------
+% Rover Resume - Star Template
+% Link: https://github.com/subidit/rover-resume
+%-------------------------
+
+\documentclass[11pt]{article}
+
+\usepackage[sfdefault,semibold,lf]{FiraSans}
+\usepackage[a4paper,margin=1in]{geometry}
+
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{141E61}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\newcommand{\linkicon}{
+  \color{gray}{\footnotesize\raisebox{1pt}{\faIcon{external-link-alt}}}
+}
+
+\setcounter{secnumdepth}{0}
+\pdfgentounicode=1
+
+%====== LIST FORMATTING ======
+\usepackage{enumitem}
+\setlist[itemize]{nosep, left=0pt .. 1.5em}
+\setlist[enumerate]{left=0pt..1.5em}
+\setlist[description]{itemsep=0pt}
+
+%====== TITLE FORMATTING ======
+\usepackage{xhfill}
+\usepackage{soul}
+\newcommand{\midrule}[1]{
+  \leavevmode
+  \xrfill[.5ex]{1pt}[accent]~\so{#1}~\xrfill[.5ex]{1pt}[accent]
+}
+
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{*4}{*1}
+\titlespacing{\subsection}{0pt}{*3}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{\midrule}
+\titleformat*{\subsection}{\large\bfseries\scshape}
+
+%====== CUSTOM COMMANDS ======
+\newcommand{\aux}[1]{
+  $|$ \space {\normalfont\itshape #1}%
+}
+\newcommand{\rside}[1]{
+  \hfill {\normalfont\color{accent} #1}%
+}
+\newcommand{\cvsubsection}[3]{%
+  \vspace{1em}%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}Y r@{}}
+    {\normalfont\bfseries #1 \aux{#2}} & {\normalfont\color{accent} #3} \\
+  \end{tabularx}%
+  \vspace{0.5em}%
+}
+
+%====== FOOTER ======
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{gray} Ian Soares -- Page \thepage\ of \pageref*{LastPage}}
+
+%====== PACKAGES ======
+\usepackage{fontawesome5}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+
+%====== DOCUMENT START ======
+\begin{document}
+
+%====== BANNER ======
+\begin{center}
+  {
+    \fontsize{36}{12}\fontseries{heavy}\selectfont\color{accent}
+    IAN SOARES
+  } \\ \medskip
+
+  % substitua pelos seus contatos
+  \href{tel:+5531998490641}{{\color{gray}{\faPhone}} +55 (31) 99849-0641} \quad
+  \href{mailto:ianptkcs@gmail.com}{{\color{gray}{\faEnvelope}} ianptkcs@gmail.com} \quad
+  \href{https://github.com/ianptkcs}{{\color{gray}{\faGithub}} Github/ianptkcs} \quad
+  \href{https://linkedin.com/in/ianptkcs}{{\color{gray}{\faLinkedin}} LinkedIn/ianptkcs}
+  \href{https://portfolio-red-bice-eight.vercel.app/}{{\color{gray}{\faBriefcase}} portfolio}
+\end{center}
+
+%====== SECTION: Education ======
+\section{Education}
+
+\cvsubsection{Technological Institute of Aeronautics (ITA)}{BSc in Computer Engineering (INCOMPLETE)}{03/2024 -- 12/2024}
+\begin{itemize}
+  \item Studied basic engineering cycle.
+  \item Participated in initiatives like CASD and ITA Bits.
+  \item Left to pursue a more computing-focused curriculum.
+\end{itemize}
+
+
+%====== SECTION: Experience ======
+\section{Experience}
+
+\cvsubsection{Ensino Ágil}{Fullstack Developer}{01/2025 -- Today}
+\begin{itemize}
+  \item Responsible for modernizing UI/UX: refactor legacy pages and design new ones.
+  \item Lead creation of checkout pages.
+  \item Currently developing modular feature architecture by separating Virtual Learning Environment and Virtual Teaching Assistant to deliver a modern experience.
+\end{itemize}
+
+
+%====== SECTION: Projects ======
+\section{Projects}
+
+\cvsubsection{Red Lib}{Personal Project}{06/2025 -- Today}
+\begin{itemize}
+  \item Developing an integrated library platform to track shows, anime, books and other media in one place.
+\end{itemize}
+
+
+\cvsubsection{Portfolio}{Personal Project}{06/2025 -- Today}
+\begin{itemize}
+  \item Developed a responsive, modern portfolio website to showcase projects and skills.
+  \item Implemented key features using DaisyUI, SolidStart, bunSQLite and Drizzle.
+\end{itemize}
+
+
+\end{document}

@@ -84,31 +84,56 @@ export default function Index() {
               </Suspense>
             </ul>
           </div>
-          <div class="flex flex-col gap-4 max-w-60">
-            <span class="text-base lg:text-xl font-bold">Download my CV:</span>
-            <A
-              role="button"
-              class="btn btn-md lg:btn-lg xl:btn-xl"
-              href="cv.pdf"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2.5"
-                stroke="currentColor"
-                class="size-4 md:size-6 xl:size-8"
+          <div class="flex flex-col gap-4">
+            <span class="text-base lg:text-xl font-bold">My CVs:</span>
+            <ul class="flex flex-wrap gap-2 lg:gap-4">
+              <A
+                role="button"
+                class="btn btn-md lg:btn-lg xl:btn-xl"
+                href="cv/cv-dev.pdf"
+                target="_blank"
+                rel="noreferrer noopener"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d={Icon.file}
-                />
-              </svg>
-              Download CV
-            </A>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2.5"
+                  stroke="currentColor"
+                  class="size-4 md:size-6 xl:size-8"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d={Icon.file}
+                  />
+                </svg>
+                Dev CV
+              </A>
+              <A
+                role="button"
+                class="btn btn-md lg:btn-lg xl:btn-xl"
+                href="cv/cv-tutor.pdf"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2.5"
+                  stroke="currentColor"
+                  class="size-4 md:size-6 xl:size-8"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d={Icon.file}
+                  />
+                </svg>
+                Tutor CV
+              </A>
+            </ul>
           </div>
         </div>
       </div>

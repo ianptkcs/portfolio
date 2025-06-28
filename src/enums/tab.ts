@@ -7,6 +7,7 @@ export enum Tab {
   tutoring = "tutoring",
   education = "education",
   projects = "projects",
+  about = "about",
 };
 
 export const kTabIcon: Record<Tab, Icon> = {
@@ -15,6 +16,7 @@ export const kTabIcon: Record<Tab, Icon> = {
   [Tab.tutoring]: Icon.chalkboard,
   [Tab.education]: Icon.gradCap,
   [Tab.projects]: Icon.folder,
+  [Tab.about]: Icon.info,
 };
 
 export const kTabLabel: Record<Tab, string> = Object.entries(Tab).reduce(

@@ -10,7 +10,7 @@ export default function App() {
       root={(props) => (
         <div class="flex flex-col gap-4 p-4">
           <Navbar />
-          <div class="card card-border bg-base-100 w-full h-full">
+          <div class="card card-border shadow-md bg-base-100 w-full h-full">
             <Suspense>{props.children}</Suspense>
           </div>
         </div>

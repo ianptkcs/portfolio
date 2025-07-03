@@ -12,9 +12,9 @@ export const experiences: Experience[] = [
     start: "01/2025",
     location: "Remote",
     description: [
-      "Responsible for modernizing UI/UX: refactor legacy pages and design new ones.",
-      "Lead creation of checkout pages.",
-      "Currently developing modular feature architecture by separating Virtual Learning Environment and Virtual Teaching Assistant to deliver a modern experience.",
+      "Spearheaded the modernization of the platform’s UI/UX.",
+      "Refactoring legacy pages, thereby enhancing usability and performance.",
+      "Designed new modern, rich, interactive interfaces, notably the Checkout and AVE Dashboard.",
     ],
     skills: [
       Skill.angular,

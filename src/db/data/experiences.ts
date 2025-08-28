@@ -113,6 +113,7 @@ export const experiences: Experience[] = [
     location: "Remote",
     description: [
       "Developing an integrated library platform to track shows, anime, books and other media in one place.",
+      "Trying to learn Elixir and Phoenix with this oportunity.",
     ],
     skills: [
       Skill.elixir,

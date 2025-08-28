@@ -18,7 +18,7 @@ import type { Experience } from "~/db/schema";
 const rootDir = process.cwd();
 const cvDir = join(rootDir, "src", "cv");
 const publicDir = join(rootDir, "public", "cv");
-const myCvFilesDir = "/home/ianptkcs/mystuff/files/docs/profissionais";
+const myCvFilesDir = "/home/ianptkcs/meustrem/docs/profissionais/";
 
 // Ensure output directories exist
 for (const dir of [cvDir, publicDir]) {
